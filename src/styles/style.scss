@@ -213,6 +213,8 @@
 
   &__slide {
     background-image: url(../img/mock/jumbo/jumbo-1920-sofa.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
     padding: 80px 0;
   }
 
@@ -396,5 +398,34 @@
 
   .secondary-btn {
     margin-top: 24px;
+  }
+}
+
+.banner {
+  margin-top: 84px;
+  padding: 150px 0;
+
+  background-image: url(../img/mock/banner/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  &__title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    max-width: 508px;
+    color: white;
+  }
+
+  &__accent {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 120%;
+    color: #d5b986;
+  }
+
+  .primary-btn {
+    margin-top: 49px;
   }
 }
