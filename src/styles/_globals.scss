@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+body {
+  max-width: 1920px;
+  margin: auto;
+}
+
 body,
 input {
   font-family: 'Open Sans', sans-serif;

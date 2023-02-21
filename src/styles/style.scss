@@ -194,7 +194,21 @@
   line-height: 100%;
 }
 
+.secondary-btn {
+  display: block;
+  max-width: max-content;
+  padding: 19px 35px;
+  border: 2px solid var.$primary;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 100%;
+  color: var.$primary;
+}
+
 .jumbotron {
+  margin-top: 32px;
+
   &__slide {
     background-image: url(../img/mock/jumbo/jumbo-1920-sofa.jpg);
     padding: 80px 0;
@@ -212,5 +226,108 @@
 
   .primary-btn {
     margin-top: 71px;
+  }
+}
+
+.offers {
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    'title controls'
+    'list list';
+
+  &__title {
+    grid-area: title;
+    margin-bottom: 26px;
+  }
+
+  &__controls {
+    grid-area: controls;
+
+    display: flex;
+    justify-content: flex-end;
+
+    &_next {
+      margin-left: 10px;
+    }
+  }
+
+  &__list {
+    grid-area: list;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 32px;
+
+    .offer:nth-child(2) {
+      grid-column: 2 / 4;
+    }
+  }
+}
+
+.card {
+  background-color: var.$gray-light;
+  border-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.offer {
+  $padding: 30px;
+
+  padding: $padding;
+
+  &__discount {
+    padding: 7px 29px 7px 19px;
+    background: center / contain no-repeat url(../img/ui/special-price-bg.svg);
+    max-width: max-content;
+    transform: translateX(-$padding);
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 19px;
+    color: white;
+  }
+
+  &__img {
+    height: 218px;
+    object-fit: contain;
+  }
+
+  &__info {
+    margin-top: 16px;
+    max-width: 225px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  &__price-container {
+    display: flex;
+
+    margin-top: 22px;
+  }
+
+  &__price {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 130%;
+    color: var.$secondary;
+
+    &_before {
+      margin-left: 30px;
+      text-decoration: line-through;
+      color: var.$gray;
+    }
+  }
+
+  &__link {
+    margin-top: 22px;
   }
 }

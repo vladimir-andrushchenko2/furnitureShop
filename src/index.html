@@ -102,10 +102,10 @@
       </div>
     </section>
 
-    <section class="offers">
+    <section class="offers container">
       <h2 class="offers__title">Специальные предложения</h2>
       <div class="offers__controls">
-        <button type="button" class="offers__back-btn" aria-label="previous special offer" disabled>
+        <button type="button" class="offers__controls_back" aria-label="previous special offer" disabled>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
@@ -113,7 +113,7 @@
           </svg>
 
         </button>
-        <button type="button" class="offers__next-btn" aria-label="next special offer">
+        <button type="button" class="offers__controls_next" aria-label="next special offer">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
@@ -123,40 +123,40 @@
       </div>
       <ul class="offers__list">
         <li class="offer card">
+          <p class="offer__discount">- 9 000</p>
           <img class="offer__img" src="<%=require('./img/mock/special/armchair.png')%>" alt="кресло">
           <div class="offer__info">
             <h3 class="offer__title">Кресло велюровое “X-24”</h3>
             <div class="offer__price-container">
               <p class="offer__price">15 990 руб</p>
-              <p class="offer__price_before">24 990 руб</p>
+              <p class="offer__price offer__price_before">24 990 руб</p>
             </div>
             <a class="offer__link secondary-btn" href="#">Купить</a>
           </div>
-          <p class="offer__discount">- 9 000</p>
         </li>
         <li class="offer card">
+          <p class="offer__discount">- 9 000</p>
           <img class="offer__img" src="<%=require('./img/mock/special/sofa-white.png')%>" alt="кресло">
           <div class="offer__info">
             <h3 class="offer__title">Диван тканевый “Z-44”</h3>
             <div class="offer__price-container">
               <p class="offer__price">15 990 руб</p>
-              <p class="offer__price_before">24 990 руб</p>
+              <p class="offer__price offer__price_before">24 990 руб</p>
             </div>
             <a class="offer__link secondary-btn" href="#">Купить</a>
           </div>
-          <p class="offer__discount">- 9 000</p>
         </li>
         <li class="offer card">
+          <p class="offer__discount">- 9 000</p>
           <img class="offer__img" src="<%=require('./img/mock/special/clock.png')%>" alt="кресло">
           <div class="offer__info">
             <h3 class="offer__title">Будильник “Quartz-23”</h3>
             <div class="offer__price-container">
               <p class="offer__price">15 990 руб</p>
-              <p class="offer__price_before">24 990 руб</p>
+              <p class="offer__price offer__price_before">24 990 руб</p>
             </div>
             <a class="offer__link secondary-btn" href="#">Купить</a>
           </div>
-          <p class="offer__discount">- 9 000</p>
         </li>
       </ul>
     </section>
