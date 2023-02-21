@@ -187,7 +187,9 @@
   padding: 22px 50px;
   display: block;
   max-width: max-content;
+
   border-radius: 10px;
+  border: 0;
 
   font-weight: 700;
   font-size: 16px;
@@ -571,5 +573,72 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 33px;
+  }
+}
+
+.contact {
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: 'form decoration';
+  gap: 30px;
+
+  &__form {
+    grid-area: form;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__input {
+    margin-top: 30px;
+    padding: 7px 18px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background-color: var.$gray-light;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+
+    &:first-of-type {
+      margin-top: 16px;
+    }
+
+    &::placeholder {
+      color: var.$gray;
+    }
+  }
+
+  &__user-agree {
+    margin-top: 12px;
+  }
+
+  .primary-btn {
+    margin-top: 30px;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+  }
+
+  &__subtitle {
+    margin-top: 9px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+    color: var.$gray-shade;
+  }
+
+  &__decoration {
+    grid-area: decoration;
+
+    background: no-repeat center / contain
+      url(../img/decoration/form-decoration.png);
   }
 }

@@ -388,7 +388,7 @@
       </div>
     </section>
 
-    <section class="contact">
+    <section class="contact container">
       <form class="contact__form">
         <h2 class="contact__title">Мы всегда вам рады!</h2>
         <p class="contact__subtitle">
@@ -396,15 +396,16 @@
           распределения внутренних резервов и ресурсов.
           <button type="button" class="tooltip" aria-label="tooltip"></button>
         </p>
-        <input placeholder="Как вас зовут?" type="text" name="name" class="contact__name">
-        <input placeholder="Ваш телефон" type="tel" name="tel" class="contact__tel">
-        <input placeholder="Ваш e-mail" type="email" name="email" class="contact__email">
-        <input type="submit" value="Отправить">
-        <label>
+        <input placeholder="Как вас зовут?" type="text" name="name" class="contact__input contact__name">
+        <input placeholder="Ваш телефон" type="tel" name="tel" class="contact__input contact__tel">
+        <input placeholder="Ваш e-mail" type="email" name="email" class="contact__input contact__email">
+        <input class="primary-btn" type="submit" value="Отправить">
+        <label class="contact__user-agree">
           <input type="checkbox" name="terms">
           Принимаю <a href="#"> пользовательское соглашение</a>
         </label>
       </form>
+      <div class="contact__decoration"></div>
     </section>
   </main>
 
