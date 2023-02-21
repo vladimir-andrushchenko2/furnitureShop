@@ -192,6 +192,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 100%;
+  cursor: pointer;
 }
 
 .secondary-btn {
@@ -204,6 +205,7 @@
   font-size: 16px;
   line-height: 100%;
   color: var.$primary;
+  cursor: pointer;
 }
 
 .jumbotron {
@@ -329,5 +331,70 @@
 
   &__link {
     margin-top: 22px;
+  }
+}
+
+.rated-section {
+  margin-top: 70px;
+
+  &__title {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 100%;
+  }
+
+  &__list {
+    margin-top: 26px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: auto auto;
+    gap: 32px;
+  }
+
+  &__load-more {
+    margin: 32px auto 0;
+  }
+}
+
+.rated {
+  padding: 30px;
+
+  &__rating {
+    padding-left: 22px;
+    background: no-repeat left center url(../img/ui/star.svg);
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+
+    color: var.$secondary;
+  }
+
+  &__img {
+    margin-top: 22px;
+    width: 110%;
+    height: 130px;
+    object-fit: contain;
+    align-self: center;
+  }
+
+  &__title {
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 130%;
+  }
+
+  &__price {
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 130%;
+    color: var.$gray-shade;
+  }
+
+  .secondary-btn {
+    margin-top: 24px;
   }
 }
