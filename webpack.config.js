@@ -1,5 +1,6 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 const path = require('path');
 
@@ -7,15 +8,14 @@ module.exports = (env) => ({
   entry: './src/scripts/index.js',
   plugins: [
     new HtmlWebpackPlugin({
-      title: 'Furniture Store',
       template: './src/index.html',
     }),
+    new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(),
   ],
   output: {
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'dist'),
-    clean: true,
   },
   module: {
     rules: [
@@ -51,6 +51,5 @@ module.exports = (env) => ({
     port: 8080,
     open: true,
     hot: true,
-    historyApiFallback: true,
   },
 });

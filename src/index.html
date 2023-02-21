@@ -5,15 +5,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Playfair+Display:wght@900&display=swap"
+    rel="stylesheet">
+  <title>Furniture</title>
 </head>
 
 <body>
-  <header class="header">
-    <div class="region">Ваш регион:
-      <select title="region">
+  <header class="header container">
+    <div class="contacts">Ваш регион:
+      <select class="region select" title="region">
         <option value="msk">Москва</option>
         <option value="kr">Краснодар</option>
       </select>
+      <a class="telephone" href="tel:+74958854547">+7 (495) 885-45-47</a>
     </div>
 
     <nav class="info-nav">
@@ -72,7 +79,7 @@
         <input type="search" class="search-form__search-query" name="search-query" placeholder="Я хочу купить...">
         <input type="submit" class="search-form__submit" aria-label="submit" value="">
       </div>
-      <select title="category" name="category">
+      <select class="search-form__category select" title="category" name="category">
         <option value="default">Категория</option>
         <option value="sofas">Диваны</option>
         <option value="arm-chairs">Кресла</option>
@@ -80,10 +87,11 @@
     </form>
 
     <div class="user-links-wrapper">
-      <a class="user-profile-link" href="#">user</a>
-      <a class="user-cart-link" href="#">cart</a>
+      <a class="user-profile-link" href="#"></a>
+      <a class="user-cart-link" href="#"></a>
     </div>
   </header>
+
   <main class="main">
     <section class="jumbotron">
       <div class="jumbotron__slide">
