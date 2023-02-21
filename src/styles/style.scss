@@ -642,3 +642,55 @@
       url(../img/decoration/form-decoration.png);
   }
 }
+
+.footer {
+  background-color: #eaeaea;
+  padding: 24px 0;
+  margin-top: 70px;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social-links {
+    margin-top: 31px;
+
+    display: flex;
+  }
+
+  &__social-link-wrapper:not(:first-child) {
+    margin-left: 20px;
+  }
+
+  &__nav {
+    display: flex;
+  }
+
+  &__links:not(:first-child) {
+    margin-left: 112px;
+  }
+
+  &__link-wrapper:first-child &__link {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 100%;
+    color: var.$black;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: var.$gray;
+  }
+}
+
+.copyright {
+  padding: 6px;
+  text-align: center;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: var.$gray;
+}
