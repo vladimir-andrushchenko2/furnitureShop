@@ -527,3 +527,49 @@
     }
   }
 }
+
+.advice-section {
+  margin-top: 70px;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, auto);
+  grid-template-areas:
+    'title controls'
+    'list list';
+
+  &__title {
+    grid-area: title;
+  }
+
+  &__controls {
+    grid-area: controls;
+    justify-self: end;
+  }
+
+  &__list {
+    grid-area: list;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    margin-top: 26px;
+  }
+}
+
+.advice {
+  &__info {
+    padding: 30px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 33px;
+  }
+}
