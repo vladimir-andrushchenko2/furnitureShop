@@ -552,7 +552,7 @@
 .advice {
   &__info {
     padding: 30px;
-    height: 250px;
+    min-height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -567,6 +567,10 @@
   &__img {
     width: 100%;
   }
+
+  &:nth-child(n + 3) {
+    display: none;
+  }
 }
 
 .contact {
@@ -574,12 +578,9 @@
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: 'form decoration';
   gap: 30px;
 
   &__form {
-    grid-area: form;
-
     display: flex;
     flex-direction: column;
   }
@@ -629,8 +630,6 @@
   }
 
   &__decoration {
-    grid-area: decoration;
-
     background: no-repeat center / contain
       url(../img/decoration/form-decoration.png);
   }
