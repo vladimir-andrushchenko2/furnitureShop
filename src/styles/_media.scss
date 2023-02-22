@@ -1,0 +1,42 @@
+@media screen and (max-width: 1340px) {
+  .container {
+    max-width: 951px;
+  }
+
+  .contacts {
+    justify-content: space-between;
+    padding: 18px 0;
+  }
+
+  .header {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, auto);
+    gap: 0;
+    grid-template-areas:
+      'contacts contacts contacts contacts'
+      'info info info user'
+      'logo nav nav nav'
+      'search search search search';
+
+    .info-nav {
+      padding: 18px 0;
+    }
+
+    .nav {
+      padding: 34px 0;
+      &__link-wrapper {
+        margin-left: 37px;
+      }
+    }
+  }
+
+  .search-form {
+    &__search-query {
+      width: 652px;
+    }
+
+    &__submit {
+      left: 588px;
+    }
+  }
+}
