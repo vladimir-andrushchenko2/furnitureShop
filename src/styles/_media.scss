@@ -187,4 +187,55 @@
       }
     }
   }
+
+  .jumbotron__slide {
+    background-image: url(../img/mock/jumbo/jumbo-768.jpg);
+    background-position: bottom;
+  }
+
+  .offers__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .offer:nth-child(n + 3) {
+    display: none;
+  }
+
+  .rated-section__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner .container {
+    transform: translateX(-36px);
+  }
+
+  .categories__list {
+    grid-template-columns: repeat(2, 1fr);
+
+    .category:first-child {
+      grid-column: span 2;
+    }
+  }
+
+  .advice-section__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .advice:nth-child(n + 3) {
+    display: none;
+  }
+
+  .contact {
+    grid-template-columns: repeat(3, 1fr);
+
+    &__form {
+      grid-column: span 2;
+    }
+
+    &__decoration {
+      grid-column: span 1;
+      background-size: cover;
+      background-position: left;
+    }
+  }
 }
