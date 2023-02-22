@@ -7,6 +7,13 @@
 }
 
 // Header
+.burger {
+  width: 24px;
+  height: 24px;
+  background-image: url(../img/ui/burger.svg);
+  display: none;
+}
+
 .contacts {
   font-weight: 400;
   font-size: 16px;
@@ -125,6 +132,10 @@
 
   .contacts {
     grid-area: contacts;
+  }
+
+  .burger {
+    grid-area: burger;
   }
 
   .info-nav {

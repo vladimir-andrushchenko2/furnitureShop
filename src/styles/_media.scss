@@ -53,6 +53,7 @@
       height: auto;
       max-height: 218px;
       max-width: 254px;
+      width: 100%;
     }
 
     &.card {
@@ -136,6 +137,54 @@
 
     .footer__links:not(:first-child) {
       margin-left: 0;
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .container {
+    max-width: 624px;
+  }
+
+  .burger {
+    display: block;
+  }
+
+  .search-form {
+    &__search-query {
+      width: 435px;
+    }
+
+    &__submit {
+      left: 371px;
+    }
+  }
+
+  .header {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-areas:
+      'contacts contacts contacts'
+      'info info info'
+      'burger logo user'
+      'search   search   search';
+
+    .nav {
+      display: none;
+    }
+
+    .logo-wrapper {
+      padding: 32px 0;
+    }
+
+    .info-nav {
+      &__links {
+        justify-content: space-between;
+        flex-grow: 1;
+      }
+
+      &__link-wrapper:not(:first-child) {
+        margin-left: 0;
+      }
     }
   }
 }
