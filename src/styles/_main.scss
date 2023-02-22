@@ -48,11 +48,13 @@
 }
 
 .search-form {
-  position: relative;
-
   height: 100%;
 
   display: flex;
+
+  &__input-wrapper {
+    position: relative;
+  }
 
   &__search-query {
     width: 761px;
@@ -80,7 +82,7 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    left: 697px;
+    right: 32px;
 
     border: 0;
     background: 0;
@@ -463,69 +465,74 @@
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: auto auto;
     gap: 32px;
+  }
 
-    .category {
-      $padding: 30px;
+  .category {
+    $padding: 30px;
 
-      padding: $padding;
+    padding: $padding;
 
-      &__img {
-        transform: translateX(-$padding);
-        margin-top: 30px;
+    &__img {
+      transform: translateX(-$padding);
+      margin-top: 30px;
 
-        width: 100%;
-        max-width: 92%;
-        max-height: 202px;
-        object-fit: contain;
-        object-position: left;
+      width: 100%;
+      max-width: 92%;
+      max-height: 202px;
+      object-fit: contain;
+      object-position: left;
+    }
+
+    &:nth-child(-n + 2) .category__img {
+      max-height: 302px;
+    }
+
+    &:nth-child(-n + 2) {
+      grid-column: span 3;
+    }
+
+    &:nth-child(n + 3) {
+      grid-column: span 2;
+    }
+
+    &__sub-categories-list {
+      display: flex;
+    }
+
+    &__sub-category-item {
+      &:not(:first-child) {
+        margin-left: 30px;
       }
+    }
 
-      &:nth-child(-n + 2) .category__img {
-        max-height: 302px;
+    &__sub-category-link {
+      color: var.$gray;
+    }
+
+    &__title {
+      margin-top: 14px;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 33px;
+    }
+
+    .arrow-btn {
+      margin-top: 30px;
+
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-left: 5px;
+        width: 22px;
+        height: 22px;
+        transform: translateY(10%);
       }
+    }
 
-      &:nth-child(-n + 2) {
-        grid-column: span 3;
-      }
-
-      &:nth-child(n + 3) {
-        grid-column: span 2;
-      }
-
-      &__sub-categories-list {
-        display: flex;
-      }
-
-      &__sub-category-item {
-        &:not(:first-child) {
-          margin-left: 30px;
-        }
-      }
-
-      &__sub-category-link {
-        color: var.$gray;
-      }
-
-      &__title {
-        margin-top: 14px;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 33px;
-      }
-
-      .arrow-btn {
-        margin-top: 30px;
-
-        display: flex;
-        align-items: center;
-
-        svg {
-          margin-left: 5px;
-          width: 22px;
-          height: 22px;
-          transform: translateY(10%);
-        }
-      }
+    &__arrow-link {
+      display: none;
+      transform: translateY(20%);
     }
   }
 }
