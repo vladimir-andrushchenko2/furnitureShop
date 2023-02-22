@@ -39,4 +39,32 @@
       left: 588px;
     }
   }
+
+  .offers__list {
+    grid-template-columns: repeat(3, 1fr);
+
+    .offer:nth-child(2) {
+      grid-column: span 1;
+    }
+  }
+
+  .offer {
+    &__img {
+      height: auto;
+      max-height: 218px;
+      max-width: 254px;
+    }
+
+    &.card {
+      justify-content: space-between;
+    }
+  }
+
+  .rated-section__list {
+    grid-template-columns: repeat(3, 1fr);
+
+    .card:nth-child(n + 7) {
+      display: none;
+    }
+  }
 }
