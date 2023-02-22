@@ -238,4 +238,23 @@
       background-position: left;
     }
   }
+
+  .footer {
+    .container {
+      flex-direction: column;
+    }
+
+    &__icons {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__social-links {
+      margin: 0;
+    }
+
+    &__nav {
+      margin-top: 25px;
+    }
+  }
 }
