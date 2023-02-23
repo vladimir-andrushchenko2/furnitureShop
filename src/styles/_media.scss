@@ -1,4 +1,8 @@
 @media screen and (max-width: 1340px) {
+  .header-decoration {
+    top: 58px;
+  }
+
   .container {
     max-width: 951px;
   }
@@ -8,8 +12,21 @@
     padding: 18px 0;
   }
 
+  .info-nav {
+    padding: 18px 0;
+    justify-content: flex-start;
+  }
+
+  .nav {
+    padding: 32px 0;
+
+    &__link-wrapper {
+      margin-left: 42px;
+    }
+  }
+
   .header {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 200px repeat(2, 1fr) 150px;
     grid-template-rows: repeat(4, auto);
     gap: 0;
     grid-template-areas:
@@ -17,17 +34,6 @@
       'info info info user'
       'logo nav nav nav'
       'search search search search';
-
-    .info-nav {
-      padding: 18px 0;
-    }
-
-    .nav {
-      padding: 34px 0;
-      &__link-wrapper {
-        margin-left: 37px;
-      }
-    }
   }
 
   .search-form {
@@ -41,6 +47,10 @@
 
     .offer:nth-child(2) {
       grid-column: span 1;
+
+      .offer__img {
+        transform: none;
+      }
     }
   }
 
@@ -68,32 +78,35 @@
   .categories {
     &__list {
       grid-template-columns: repeat(3, 1fr);
-
-      .category {
-        overflow: hidden;
-
-        &:nth-child(-n + 1) {
-          grid-column: span 2;
-        }
-
-        // nth-child to overwrite prev size where first to cards have to be bigger
-        &__img:nth-child(n) {
-          max-height: 296px;
-          max-width: none;
-          width: 200%;
-        }
-
-        &:nth-child(n + 2) {
-          grid-column: span 1;
-
-          .category__img {
-            transform: translateX(-30%);
-          }
-        }
-      }
     }
   }
 
+  .category {
+    overflow: hidden;
+
+    &:nth-child(-n + 1) {
+      grid-column: span 2;
+    }
+
+    // nth-child to overwrite prev size where first to cards have to be bigger
+    &__img:nth-child(n) {
+      max-height: 296px;
+      max-width: none;
+      width: 200%;
+    }
+
+    &:nth-child(n + 2) {
+      grid-column: span 1;
+
+      .category__img {
+        transform: translateX(-30%);
+      }
+    }
+
+    .arrow-btn {
+      margin-top: 32px;
+    }
+  }
   .advice-section__list {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -112,6 +125,10 @@
   .contact {
     grid-template-columns: repeat(9, 1fr);
 
+    .primary-btn {
+      margin-top: 31px;
+    }
+
     &__form {
       grid-column: span 4;
     }
@@ -122,17 +139,23 @@
   }
 
   .footer {
+    padding-bottom: 20px;
     .container {
       justify-content: space-between;
     }
-    .footer__nav {
-      max-width: 715px;
+
+    &__nav {
+      max-width: 733px;
       justify-content: space-between;
       flex-grow: 1;
     }
 
-    .footer__links:not(:first-child) {
+    &__links:not(:first-child) {
       margin-left: 0;
+    }
+
+    &__link-wrapper:not(:first-child) {
+      margin-top: 1px;
     }
   }
 }
@@ -152,6 +175,11 @@
     }
   }
 
+  .logo-wrapper {
+    padding: 28px 0;
+    transform: translateX(10px);
+  }
+
   .header {
     grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
@@ -162,10 +190,6 @@
 
     .nav {
       display: none;
-    }
-
-    .logo-wrapper {
-      padding: 32px 0;
     }
 
     .info-nav {
@@ -183,6 +207,10 @@
   .jumbotron__slide {
     background-image: url(../img/mock/jumbo/jumbo-768.jpg);
     background-position: bottom;
+  }
+
+  .offers {
+    grid-template-columns: 1fr 150px;
   }
 
   .offers__list {
@@ -209,6 +237,10 @@
     }
   }
 
+  .advice-section {
+    margin-top: 74px;
+  }
+
   .advice-section__list {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -219,6 +251,10 @@
 
   .contact {
     grid-template-columns: repeat(3, 1fr);
+
+    .primary-btn {
+      margin-top: 29px;
+    }
 
     &__form {
       grid-column: span 2;
@@ -232,6 +268,8 @@
   }
 
   .footer {
+    padding-top: 26px;
+
     .container {
       flex-direction: column;
     }
@@ -246,19 +284,30 @@
     }
 
     &__nav {
-      margin-top: 25px;
+      margin-top: 18px;
     }
   }
 }
 
 @media screen and (max-width: 720px) {
+  .header-decoration {
+    top: 0;
+  }
+
   .container {
     padding: 0 12px;
     min-width: 300px;
   }
 
+  .logo-wrapper {
+    transform: none;
+    padding: 12px 0;
+    display: flex;
+    justify-content: center;
+  }
+
   .search-form {
-    margin-top: 16px;
+    margin-top: 29px;
     flex-direction: column;
     height: auto;
 
@@ -276,6 +325,8 @@
 
   .contacts {
     flex-direction: column;
+    align-items: flex-start;
+    padding: 13px 0 29px;
   }
 
   .telephone {
@@ -290,16 +341,10 @@
       'contacts contacts'
       'burger user'
       'search search';
+  }
 
-    .info-nav {
-      display: none;
-    }
-
-    .logo-wrapper {
-      padding: 12px 0;
-      display: flex;
-      justify-content: center;
-    }
+  .info-nav {
+    display: none;
   }
 
   .jumbotron {
@@ -307,13 +352,16 @@
       height: 210px;
       position: relative;
 
+      padding: 30px 17px;
+
       .primary-btn {
         margin: 0;
+        padding: 22px 105px;
 
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: -96px;
+        bottom: -93px;
       }
     }
 
@@ -325,7 +373,7 @@
   }
 
   .offers {
-    margin-top: 166px;
+    margin-top: 163px;
 
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
@@ -342,20 +390,54 @@
       justify-content: center;
       margin-top: 16px;
     }
+
+    &__title {
+      font-size: 24px;
+      line-height: 100%;
+    }
   }
 
-  .offer {
-    &__info {
-      margin: 16px auto 0;
+  .offer:nth-child(2) {
+    display: none;
+  }
+
+  .rated-section__title {
+    font-size: 24px;
+    line-height: 100%;
+  }
+
+  .rated-section {
+    margin-top: 66px;
+
+    &__list {
+      gap: 16px;
     }
+  }
+
+  .rated {
+    padding: 16px;
+    min-height: 278px;
 
     &__img {
-      margin: 8px auto;
+      height: auto;
+      width: 100%;
+      max-width: 108px;
     }
-  }
 
-  .rated-section__list {
-    grid-template-columns: 1fr;
+    &__title {
+      font-size: 16px;
+      line-height: 130%;
+    }
+
+    .secondary-btn {
+      line-height: 130%;
+      padding: 8px 22px;
+      margin-top: 12px;
+    }
+
+    &__rating {
+      transform: scale(0.8) translate(-12px, -2px);
+    }
   }
 
   .banner {

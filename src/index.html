@@ -14,6 +14,7 @@
 </head>
 
 <body>
+  <div class="header-decoration"></div>
   <header class="header container">
     <div class="burger"></div>
 
@@ -22,7 +23,6 @@
         Ваш регион:
         <select class="region select" title="region">
           <option value="msk">Москва</option>
-          <option value="kr">Краснодар</option>
         </select>
       </span>
       <a class="telephone" href="tel:+74958854547">+7 (495) 885-45-47</a>
@@ -82,6 +82,15 @@
     <form class="search-form">
       <div class="search-form__input-wrapper">
         <input type="search" class="search-form__search-query" name="search-query" placeholder="Я хочу купить...">
+
+        <div class="search-icon">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M15.8187 14.0625L12.607 11.3156C13.5516 10.0945 14.0625 8.60156 14.0625 7.03125C14.0625 5.15156 13.3289 3.38906 12.0023 2.06016C10.6758 0.73125 8.90859 0 7.03125 0C5.15391 0 3.38672 0.733594 2.06016 2.06016C0.73125 3.38672 0 5.15156 0 7.03125C0 8.90859 0.733594 10.6758 2.06016 12.0023C3.38672 13.3312 5.15156 14.0625 7.03125 14.0625C8.60156 14.0625 10.0922 13.5516 11.3133 12.6094L14.5249 15.3539C14.5428 15.3718 14.564 15.3859 14.5873 15.3956C14.6106 15.4053 14.6356 15.4102 14.6609 15.4102C14.6861 15.4102 14.7111 15.4053 14.7344 15.3956C14.7578 15.3859 14.7789 15.3718 14.7968 15.3539L15.8187 14.3344C15.8365 14.3165 15.8507 14.2953 15.8604 14.272C15.87 14.2487 15.875 14.2237 15.875 14.1984C15.875 14.1732 15.87 14.1482 15.8604 14.1249C15.8507 14.1015 15.8365 14.0803 15.8187 14.0625ZM10.7438 10.7438C9.75 11.7352 8.43281 12.2812 7.03125 12.2812C5.62969 12.2812 4.3125 11.7352 3.31875 10.7438C2.32734 9.75 1.78125 8.43281 1.78125 7.03125C1.78125 5.62969 2.32734 4.31016 3.31875 3.31875C4.3125 2.32734 5.62969 1.78125 7.03125 1.78125C8.43281 1.78125 9.75234 2.325 10.7438 3.31875C11.7352 4.3125 12.2812 5.62969 12.2812 7.03125C12.2812 8.43281 11.7352 9.75234 10.7438 10.7438Z"
+              fill="#999999" />
+          </svg>
+        </div>
+
         <input type="submit" class="search-form__submit" aria-label="submit" value="">
       </div>
       <select class="search-form__category select" title="category" name="category">
@@ -109,8 +118,8 @@
 
     <section class="offers container">
       <h2 class="offers__title">Специальные предложения</h2>
-      <div class="offers__controls">
-        <button type="button" class="offers__controls_back" aria-label="previous special offer" disabled>
+      <div class="offers__controls controls">
+        <button type="button" class="controls__back" aria-label="previous special offer" disabled>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
@@ -118,7 +127,7 @@
           </svg>
 
         </button>
-        <button type="button" class="offers__controls_next" aria-label="next special offer">
+        <button type="button" class="controls__next" aria-label="next special offer">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
@@ -243,28 +252,31 @@
     <section class="categories container">
       <h2 class="categories__title">Топ категории</h2>
       <ul class="categories__list">
+
         <li class="category card">
-          <ul class="category__sub-categories-list">
-            <li class="category__sub-category-item">
-              <a href="#" class="category__sub-category-link">Прямые</a>
-            </li>
-            <li class="category__sub-category-item">
-              <a href="#" class="category__sub-category-link">Угловые</a>
-            </li>
-            <li class="category__sub-category-item">
-              <a href="#" class="category__sub-category-link">Модульные</a>
-            </li>
-          </ul>
-          <h3 class="category__title">
-            Диваны
-            <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
-            </svg>
-          </h3>
-          <img class="category__img" src="<%=require('./img/mock/categories/sofas.png')%>" alt="">
+          <div class="category__info">
+            <ul class="category__sub-categories-list">
+              <li class="category__sub-category-item">
+                <a href="#" class="category__sub-category-link">Прямые</a>
+              </li>
+              <li class="category__sub-category-item">
+                <a href="#" class="category__sub-category-link">Угловые</a>
+              </li>
+              <li class="category__sub-category-item">
+                <a href="#" class="category__sub-category-link">Модульные</a>
+              </li>
+            </ul>
+            <h3 class="category__title">
+              Диваны
+              <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              </svg>
+            </h3>
+            <img class="category__img" src="<%=require('./img/mock/categories/sofas.png')%>" alt="">
+          </div>
           <a href="" class="arrow-btn">
             В каталог
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -276,24 +288,26 @@
         </li>
 
         <li class="category card">
-          <ul class="category__sub-categories-list">
-            <li class="category__sub-category-item">
-              <a href="#" class="category__sub-category-link">Мягкие</a>
-            </li>
-            <li class="category__sub-category-item">
-              <a href="#" class="category__sub-category-link">Кресла-кровати</a>
-            </li>
-          </ul>
-          <h3 class="category__title">
-            Кресла
-            <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
-            </svg>
-          </h3>
-          <img class="category__img" src="<%=require('./img/mock/categories/armchairs.png')%>" alt="">
+          <div class="category__info">
+            <ul class="category__sub-categories-list">
+              <li class="category__sub-category-item">
+                <a href="#" class="category__sub-category-link">Мягкие</a>
+              </li>
+              <li class="category__sub-category-item">
+                <a href="#" class="category__sub-category-link">Кресла-кровати</a>
+              </li>
+            </ul>
+            <h3 class="category__title">
+              Кресла
+              <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              </svg>
+            </h3>
+            <img class="category__img" src="<%=require('./img/mock/categories/armchairs.png')%>" alt="">
+          </div>
           <a href="" class="arrow-btn">
             В каталог
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -305,24 +319,26 @@
         </li>
 
         <li class="category card">
-          <ul class="category__sub-categories-list">
-            <li class="category__sub-category-item">
-              <a href="#" class="category__sub-category-link">Односпальные</a>
-            </li>
-            <li class="category__sub-category-item">
-              <a href="#" class="category__sub-category-link">Двуспальные</a>
-            </li>
-          </ul>
-          <h3 class="category__title">
-            Кровати
-            <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
-            </svg>
-          </h3>
-          <img class="category__img" src="<%=require('./img/mock/categories/beds.png')%>" alt="">
+          <div class="category__info">
+            <ul class="category__sub-categories-list">
+              <li class="category__sub-category-item">
+                <a href="#" class="category__sub-category-link">Односпальные</a>
+              </li>
+              <li class="category__sub-category-item">
+                <a href="#" class="category__sub-category-link">Двуспальные</a>
+              </li>
+            </ul>
+            <h3 class="category__title">
+              Кровати
+              <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              </svg>
+            </h3>
+            <img class="category__img" src="<%=require('./img/mock/categories/beds.png')%>" alt="">
+          </div>
           <a href="" class="arrow-btn">
             В каталог
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -334,24 +350,26 @@
         </li>
 
         <li class="category card">
-          <ul class="category__sub-categories-list">
-            <li class="category__sub-category-item">
-              <a href="#" class="category__sub-category-link">Тумбы</a>
-            </li>
-            <li class="category__sub-category-item">
-              <a href="#" class="category__sub-category-link">Комоды</a>
-            </li>
-          </ul>
-          <h3 class="category__title">
-            Тумбы и комоды
-            <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
-            </svg>
-          </h3>
-          <img class="category__img" src="<%=require('./img/mock/categories/dressers.png')%>" alt="">
+          <div class="category__info">
+            <ul class="category__sub-categories-list">
+              <li class="category__sub-category-item">
+                <a href="#" class="category__sub-category-link">Тумбы</a>
+              </li>
+              <li class="category__sub-category-item">
+                <a href="#" class="category__sub-category-link">Комоды</a>
+              </li>
+            </ul>
+            <h3 class="category__title">
+              Тумбы и комоды
+              <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              </svg>
+            </h3>
+            <img class="category__img" src="<%=require('./img/mock/categories/dressers.png')%>" alt="">
+          </div>
           <a href="" class="arrow-btn">
             В каталог
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -363,24 +381,26 @@
         </li>
 
         <li class="category card">
-          <ul class="category__sub-categories-list">
-            <li class="category__sub-category-item">
-              <a href="#" class="category__sub-category-link">Деревянные</a>
-            </li>
-            <li class="category__sub-category-item">
-              <a href="#" class="category__sub-category-link">Металлокаркас</a>
-            </li>
-          </ul>
-          <h3 class="category__title">
-            Стулья
-            <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
-              xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
-            </svg>
-          </h3>
-          <img class="category__img" src="<%=require('./img/mock/categories/chairs.png')%>" alt="">
+          <div class="category__info">
+            <ul class="category__sub-categories-list">
+              <li class="category__sub-category-item">
+                <a href="#" class="category__sub-category-link">Деревянные</a>
+              </li>
+              <li class="category__sub-category-item">
+                <a href="#" class="category__sub-category-link">Металлокаркас</a>
+              </li>
+            </ul>
+            <h3 class="category__title">
+              Стулья
+              <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              </svg>
+            </h3>
+            <img class="category__img" src="<%=require('./img/mock/categories/chairs.png')%>" alt="">
+          </div>
           <a href="" class="arrow-btn">
             В каталог
             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -424,15 +444,15 @@
           </div>
         </li>
       </ul>
-      <div class="advice-section__controls">
-        <button type="button" class="useful-section__back-btn" aria-label="previous special offer" disabled>
+      <div class="advice-section__controls controls">
+        <button type="button" class="controls__back" aria-label="previous special offer" disabled>
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
             <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
           </svg>
         </button>
-        <button type="button" class="useful-section__next-btn" aria-label="next special offer">
+        <button type="button" class="controls__next" aria-label="next special offer">
           <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
               stroke-linejoin="round" />
