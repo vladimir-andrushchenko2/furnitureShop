@@ -434,7 +434,7 @@
   }
 
   &__load-more {
-    margin: 32px auto 0;
+    margin: 34px auto 0;
   }
 
   .primary-btn {
@@ -465,7 +465,7 @@
   }
 
   &__title {
-    margin-top: 5px;
+    // margin-top: 5px;
     font-weight: 400;
     font-size: 24px;
     line-height: 130%;
@@ -616,7 +616,7 @@
 }
 
 .advice-section {
-  margin-top: 70px;
+  margin-top: 67px;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -650,7 +650,7 @@
 
 .advice {
   &__info {
-    padding: 32px 30px 25px;
+    padding: 32px 30px 29px;
     min-height: 250px;
     display: flex;
     flex-direction: column;
@@ -673,7 +673,7 @@
 }
 
 .contact {
-  margin-top: 74px;
+  margin-top: 71px;
 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -722,7 +722,7 @@
   }
 
   .primary-btn {
-    margin-top: 26px;
+    margin-top: 29px;
     padding: 19px 34px;
   }
 
