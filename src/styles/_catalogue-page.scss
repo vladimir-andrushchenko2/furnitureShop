@@ -3,9 +3,9 @@
 .catalog-page {
   .catalog-wrapper {
     display: grid;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: repeat(4, 1fr);
     margin-top: 32px;
-    gap: 30px;
+    gap: 32px;
   }
 
   .bread-crumbs {
@@ -20,8 +20,6 @@
     color: var.$gray-shade;
 
     &__title {
-      margin-top: 20px;
-
       font-weight: 400;
       font-size: 18px;
       line-height: 130%;
@@ -29,7 +27,11 @@
     }
 
     &__fieldset {
-      margin-top: 26px;
+      &:first-of-type {
+        margin-top: 20px;
+      }
+
+      margin-top: 30px;
     }
 
     &__category {
@@ -37,7 +39,6 @@
         font-weight: 600;
         font-size: 16px;
         line-height: 130%;
-        // margin-top: 20px;
       }
     }
 
@@ -45,13 +46,18 @@
       display: flex;
       margin-top: 11px;
 
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+
       &:first-of-type {
         margin-top: 9px;
       }
     }
 
     &__checkbox {
-      margin-right: 12px;
+      margin-right: 18px;
+      transform: scale(1.6) translateX(2px);
     }
 
     &__price-inputs-container {
@@ -64,13 +70,17 @@
     &__price-input {
       max-width: 86px;
       margin-left: 9px;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 130%;
+      padding-left: 10px;
     }
 
     &__price-slider {
-      margin-top: 12px;
+      margin-top: 10px;
 
       &.noUi-horizontal {
-        height: 7px;
+        height: 4px;
       }
 
       .noUi-connect {
@@ -106,6 +116,8 @@
   }
 
   .catalog {
+    grid-column: span 3;
+
     &__title {
       font-weight: 400;
       font-size: 24px;
@@ -124,10 +136,14 @@
     margin-top: 90px;
     background-color: var.$black;
 
+    border-radius: 10px;
+
     &__img {
       object-fit: cover;
 
       min-height: 190px;
+
+      border-radius: 10px 10px 0 0;
     }
 
     &__title {
@@ -143,7 +159,7 @@
     }
 
     .arrow-btn {
-      margin-top: 27px;
+      margin-top: 10px;
 
       display: flex;
       align-items: center;
@@ -159,6 +175,23 @@
         height: 22px;
         transform: translateY(10%);
       }
+    }
+
+    &__info {
+      padding: 28px 30px 32px;
+    }
+  }
+
+  .rated {
+    min-height: 420px;
+    justify-content: space-between;
+
+    &__title {
+      margin-top: 4px;
+    }
+
+    &__img {
+      margin-top: 25px;
     }
   }
 }
