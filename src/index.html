@@ -113,120 +113,144 @@
       </nav>
 
       <div class="catalog-wrapper">
-        <form class="filter">
-          <h3 class="filter__title">Фильтровать по:</h3>
 
-          <fieldset class="filter__category filter__fieldset" name="category">
-            <h4 class="filter__category-title">Категория</h4>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="sofa">
-              Диваны
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="armchair">
-              Кресла
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="puff">
-              Пуфы
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="bed">
-              Кровати
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="mound">
-              Тумбы
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="comode">
-              Комоды
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="chair">
-              Стулья
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="table">
-              Столы
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="accessory">
-              Аксесуары
-            </label>
-          </fieldset>
+        <aside class="aside">
 
-          <fieldset class="filter__price filter__fieldset" name="price">
-            <h4 class="filter__category-title">Цена</h4>
-            <div class="filter__price-inputs-container">
+          <form class="filter">
+            <h3 class="filter__title">Фильтровать по:</h3>
+
+            <fieldset class="filter__category filter__fieldset" name="category">
+              <h4 class="filter__category-title">Категория</h4>
               <label class="filter__label">
-                от
-                <input class="filter__price-input" type="number" id="price-from" name="price-from" min="0">
+                <input class="filter__checkbox" type="checkbox" name="sofa">
+                Диваны
               </label>
               <label class="filter__label">
-                до
-                <input class="filter__price-input" type="number" id="price-to" name="price-to">
+                <input class="filter__checkbox" type="checkbox" name="armchair">
+                Кресла
               </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="puff">
+                Пуфы
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="bed">
+                Кровати
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="mound">
+                Тумбы
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="comode">
+                Комоды
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="chair">
+                Стулья
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="table">
+                Столы
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="accessory">
+                Аксесуары
+              </label>
+            </fieldset>
+
+            <fieldset class="filter__price filter__fieldset" name="price">
+              <h4 class="filter__category-title">Цена</h4>
+              <div class="filter__price-inputs-container">
+                <label class="filter__label">
+                  от
+                  <input class="filter__price-input" type="number" id="price-from" name="price-from" min="0">
+                </label>
+                <label class="filter__label">
+                  до
+                  <input class="filter__price-input" type="number" id="price-to" name="price-to">
+                </label>
+              </div>
+              <div class="filter__price-slider" id="price-slider"></div>
+            </fieldset>
+
+            <fieldset class="filter__discount filter__fieldset" name="discount">
+              <h4 class="filter__category-title">Категория</h4>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="discount-up" data-value="5000">
+                Более 5 000
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="discount-less" data-value="5000">
+                Менее 5 000
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="discount-any">
+                Не важно
+              </label>
+            </fieldset>
+
+            <fieldset class="filter__color filter__fieldset" name="color">
+              <h4 class="filter__category-title">Цвет</h4>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="brown">
+                Коричневый
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="black">
+                Черный
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="beige">
+                Бежевый
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="gray">
+                Серый
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="white">
+                Белый
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="blue">
+                Синий
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="orange">
+                Оранжевый
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="yellow">
+                Желтый
+              </label>
+              <label class="filter__label">
+                <input class="filter__checkbox" type="checkbox" name="green">
+                Зеленый
+              </label>
+            </fieldset>
+          </form>
+
+          <div class="promo">
+            <img class="promo__img" src="<%=require('./img/mock/banner/banner.jpg')%>" alt="">
+            <div class="promo__info">
+              <h2 class="promo__title">
+                <span class="banner__accent promo__accent">Оксфорд 1950</span>
+                <br>Новая коллекция изысканных кресел
+              </h2>
+              <a href="" class="arrow-btn">
+                В каталог
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+                </svg>
+              </a>
             </div>
-            <div class="filter__price-slider" id="price-slider"></div>
-          </fieldset>
+          </div>
 
-          <fieldset class="filter__discount filter__fieldset" name="discount">
-            <h4 class="filter__category-title">Категория</h4>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="discount-up" data-value="5000">
-              Более 5 000
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="discount-less" data-value="5000">
-              Менее 5 000
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="discount-any">
-              Не важно
-            </label>
-          </fieldset>
+        </aside>
 
-          <fieldset class="filter__color filter__fieldset" name="color">
-            <h4 class="filter__category-title">Цвет</h4>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="brown">
-              Коричневый
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="black">
-              Черный
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="beige">
-              Бежевый
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="gray">
-              Серый
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="white">
-              Белый
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="blue">
-              Синий
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="orange">
-              Оранжевый
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="yellow">
-              Желтый
-            </label>
-            <label class="filter__label">
-              <input class="filter__checkbox" type="checkbox" name="green">
-              Зеленый
-            </label>
-          </fieldset>
-        </form>
         <div class="catalog">
           <h2 class="catalog__title">Каталог</h2>
           <ul class="catalog__items">
@@ -328,6 +352,7 @@
             </li>
           </ul>
         </div>
+
       </div>
     </div>
   </main>
