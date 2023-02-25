@@ -115,14 +115,12 @@
     }
   }
 
+  .title {
+    display: none;
+  }
+
   .catalog {
     grid-column: span 3;
-
-    &__title {
-      font-weight: 400;
-      font-size: 24px;
-      line-height: 130%;
-    }
 
     &__items {
       margin-top: 24px;
@@ -192,6 +190,111 @@
 
     &__img {
       margin-top: 25px;
+    }
+  }
+
+  .filter-top {
+    display: none;
+  }
+
+  .catalog-pagination {
+    grid-column: 2 / 5;
+    display: flex;
+    justify-content: center;
+
+    &__btn {
+      padding: 6px 10px;
+      border-radius: 10px;
+      border: 2px solid var.$primary;
+      color: var.$primary;
+
+      &_active {
+        border-color: var.$primary-shade;
+        background-color: var.$primary-shade;
+        color: white;
+      }
+
+      &:not(:first-child) {
+        margin-left: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1340px) {
+  .catalog-page {
+    .catalog-wrapper {
+      row-gap: 0;
+    }
+
+    .catalog {
+      grid-column: span 4;
+
+      &__title {
+        display: none;
+      }
+    }
+
+    .title {
+      grid-column: span 4;
+
+      display: block;
+
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 130%;
+    }
+
+    .filter-top {
+      grid-column: span 4;
+
+      margin-top: 18px;
+
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &__title {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 130%;
+      }
+
+      &__container {
+        // display: flex;
+      }
+
+      &__select {
+        padding: 9px 15px;
+        min-width: 187px;
+
+        color: var.$black;
+        background-color: var.$gray-light;
+
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+
+        border-radius: 10px;
+        border: 0;
+
+        &:not(:first-child) {
+          margin-left: 32px;
+        }
+      }
+    }
+
+    .aside {
+      display: none;
+    }
+
+    .catalog__items {
+      margin-top: 31px;
+    }
+
+    .catalog-pagination {
+      grid-column: span 4;
+      margin-top: 35px;
     }
   }
 }

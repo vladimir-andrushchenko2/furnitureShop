@@ -113,6 +113,27 @@
       </nav>
 
       <div class="catalog-wrapper">
+        <h2 class="title">Каталог</h2>
+
+        <div class="filter-top">
+          <h3 class="filter-top__title">Фильтры:</h3>
+          <div class="filter-top__container">
+            <select class="filter-top__select" aria-label="category" name="category" id="">
+              <option value="default">Категория</option>
+            </select>
+            <select class="filter-top__select" aria-label="price" name="price" id="">
+              <option value="default">Цена</option>
+            </select>
+          </div>
+          <div class="filter-top__container">
+            <select class="filter-top__select" aria-label="discount" name="discount" id="">
+              <option value="default">Скидка</option>
+            </select>
+            <select class="filter-top__select" aria-label="color" name="color" id="">
+              <option value="default">Цена</option>
+            </select>
+          </div>
+        </div>
 
         <aside class="aside">
 
@@ -351,6 +372,11 @@
               </div>
             </li>
           </ul>
+        </div>
+
+        <div class="catalog-pagination">
+          <button class="catalog-pagination__btn catalog-pagination__btn_active">1</button>
+          <button class="catalog-pagination__btn">2</button>
         </div>
 
       </div>
