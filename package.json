@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "inputmask": "^5.0.7",
+    "nouislider": "^15.7.0",
     "redom": "^3.29.1",
     "validator": "^13.9.0"
   }
