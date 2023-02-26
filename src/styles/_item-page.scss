@@ -242,6 +242,71 @@
 
 @media screen and (max-width: 999px) {
   .item-page {
+    .item {
+      margin-top: 29px;
+
+      grid-template-columns: 187px 1fr;
+      grid-template-areas:
+        'img img '
+        'gallery info'
+        'advert advert'
+        'chars chars';
+
+      &__info {
+        margin-top: 83px;
+      }
+
+      &__gallery {
+        margin-top: 32px;
+        flex-direction: column;
+        min-height: 349px;
+
+        &-item {
+          object-fit: contain;
+          max-height: 61px;
+          max-width: 137px;
+          margin: auto;
+          display: block;
+        }
+      }
+
+      &__advert {
+        &-title {
+          font-size: 15px;
+        }
+
+        &-text {
+          max-width: 514px;
+          font-size: 14px;
+        }
+      }
+
+      &__demos {
+        margin-top: 31px;
+      }
+
+      &__char {
+        grid-template-columns: 400px 1fr;
+
+        &-key,
+        &-value {
+          font-size: 14px;
+          line-height: 178%;
+        }
+      }
+    }
+
+    .similar {
+      margin-top: 33px;
+
+      &__items {
+        grid-template-columns: 1fr 1fr;
+
+        .card:nth-child(3) {
+          display: none;
+        }
+      }
+    }
   }
 }
 
