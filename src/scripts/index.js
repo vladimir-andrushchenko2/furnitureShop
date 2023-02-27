@@ -1,35 +1,45 @@
-import '../styles/style.scss';
+import './styles';
+import App from './app';
 
-// slider logic
-import 'nouislider/dist/nouislider.css';
+const root = document.getElementById('root');
 
-import noUiSlider from 'nouislider';
+function getPageTemplate(idOfTemplate) {
+  return document
+    .getElementById(idOfTemplate)
+    .content.querySelector('.main')
+    .cloneNode(true);
+}
 
-const priceSlider = document.getElementById('price-slider');
+const pages = {
+  main: getPageTemplate('main-page-template'),
+  product: getPageTemplate('product-page-template'),
+  catalog: getPageTemplate('catalog-page-template'),
+};
 
-const priceFromInput = document.getElementById('price-from');
-const priceToInput = document.getElementById('price-to');
+const app = new App(root, pages);
 
-const priceInputsArray = [priceFromInput, priceToInput];
+app.loadPage('main');
 
-noUiSlider.create(priceSlider, {
-  start: [20, 80],
-  connect: true,
-  range: {
-    min: 0,
-    max: 100,
-  },
-  step: 1,
+const linksToCatalog = [
+  document.querySelector('.catalog-link'),
+  ...document.querySelectorAll('.arrow-btn'),
+];
+
+linksToCatalog.forEach((linkElement) => {
+  linkElement.addEventListener('click', (event) => {
+    event.preventDefault();
+    app.loadPage('catalog');
+  });
 });
 
-priceSlider.noUiSlider.on('update', (values, handle) => {
-  priceInputsArray[handle].value = Math.floor(values[handle]);
-});
+const linkToProductPage = [
+  ...document.querySelectorAll('.rated__link'),
+  ...document.querySelectorAll('.offer__link'),
+];
 
-priceFromInput.addEventListener('blur', () => {
-  priceSlider.noUiSlider.set([priceFromInput.value, null]);
-});
-
-priceToInput.addEventListener('blur', () => {
-  priceSlider.noUiSlider.set([null, priceToInput.value]);
+linkToProductPage.forEach((linkElement) => {
+  linkElement.addEventListener('click', (event) => {
+    event.preventDefault();
+    app.loadPage('product');
+  });
 });

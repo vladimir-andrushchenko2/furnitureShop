@@ -54,7 +54,7 @@
     <nav class="nav">
       <ul class="nav__links">
         <li class="nav__link-wrapper">
-          <a href="#" class="nav__link">Каталог</a>
+          <a href="#" class="nav__link catalog-link">Каталог</a>
         </li>
 
         <li class="nav__link-wrapper">
@@ -106,196 +106,8 @@
     </div>
   </header>
 
-  <main class="main item-page">
-    <div class="container">
-      <nav class="bread-crumbs">
-        <p class="bread-crumbs__path">Главная / Каталог / Диваны / Прямые диваны</p>
-      </nav>
+  <div id="root"></div>
 
-      <section class="item">
-        <img src="<%=require('./img/mock/item/main.png')%>" alt="" class="item__img">
-
-        <div class="item__gallery">
-          <ul class="item__list">
-            <li class="item__gallery-item-wrapper">
-              <img src="<%=require('./img/mock/item/angles/125.png')%>" alt="" class="item__gallery-item">
-            </li>
-            <li class="item__gallery-item-wrapper">
-              <img src="<%=require('./img/mock/item/angles/127.png')%>" alt="" class="item__gallery-item">
-            </li>
-            <li class="item__gallery-item-wrapper">
-              <img src="<%=require('./img/mock/item/angles/128.png')%>" alt="" class="item__gallery-item">
-            </li>
-            <li class="item__gallery-item-wrapper">
-              <img src="<%=require('./img/mock/item/angles/129.png')%>" alt="" class="item__gallery-item">
-            </li>
-          </ul>
-        </div>
-
-        <div class="item__info">
-          <p class="rated__rating item__rating">5,0</p>
-          <h1 class="item__name">Диван тканевый прямой “D-31”</h1>
-          <p class="item__desc">Мини 120 см без ящика Stark синий (Рогожка)</p>
-          <p class="item__price">28 490 руб</p>
-          <button class="item__buy-btn primary-btn">Купить в один клик</button>
-          <button class="item__add-cart">+ Добавить в корзину</button>
-        </div>
-
-        <article class="item__advert">
-          <h3 class="item__advert-title">Опорный механизм</h3>
-          <p class="item__advert-text">Опорный механизм напоминает пантограф, к которому добавили дополнительную секцию.
-            У опорного дивана сиденье «выпрыгивает» вперёд и вытаскивает вторую часть спального места. Заключительный
-            штрих — опустить спинку.
-          </p>
-          <p class="item__advert-text">
-            Этот механизм не портит пол и не боится ковров. Требуется чуть больше силы, чтобы разложить диван, но
-            подросток справится.
-          </p>
-          <div class="item__demos">
-            <img class="item__demo" src="<%=require('./img/mock/item/demo/demo.png')%>" alt="">
-            <img class="item__demo" src="<%=require('./img/mock/item/demo/demo1.png')%>" alt="">
-          </div>
-        </article>
-
-        <ul class="item__chars">
-          <li class="item__char">
-            <span class="item__char-key">Гарантия</span>
-            <span class="item__char-value">18 месяцев</span>
-          </li>
-
-          <li class="item__char">
-            <span class="item__char-key">Артикул</span>
-            <span class="item__char-value">AAA41269004</span>
-          </li>
-
-          <li class="item__char">
-            <span class="item__char-key">Длина</span>
-            <span class="item__char-value">163 см</span>
-          </li>
-          <li class="item__char">
-            <span class="item__char-key">Высота</span>
-            <span class="item__char-value">90 см</span>
-          </li>
-          <li class="item__char">
-            <span class="item__char-key">Глубина</span>
-            <span class="item__char-value">108 см</span>
-          </li>
-          <li class="item__char">
-            <span class="item__char-key">Спальное место</span>
-            <span class="item__char-value">200 см х 125 см</span>
-          </li>
-          <li class="item__char">
-            <span class="item__char-key">Высота посадки</span>
-            <span class="item__char-value">45 см</span>
-          </li>
-          <li class="item__char">
-            <span class="item__char-key">Механизм</span>
-            <span class="item__char-value">Опорный</span>
-          </li>
-          <li class="item__char">
-            <span class="item__char-key">Тип обивки</span>
-            <span class="item__char-value">Рогожка</span>
-          </li>
-          <li class="item__char">
-            <span class="item__char-key">Цвет</span>
-            <span class="item__char-value">Синий</span>
-          </li>
-          <li class="item__char">
-            <span class="item__char-key">Наполнитель</span>
-            <span class="item__char-value">Независимый пружинный блок</span>
-          </li>
-          <li class="item__char">
-            <span class="item__char-key">Материал каркаса</span>
-            <span class="item__char-value">Металл. рама с дерев. латами</span>
-          </li>
-          <li class="item__char">
-            <span class="item__char-key">Количество мест</span>
-            <span class="item__char-value">Двухместные</span>
-          </li>
-          <li class="item__char">
-            <span class="item__char-key">Категория</span>
-            <span class="item__char-value">Прямые тканевые диваны</span>
-          </li>
-          <li class="item__char">
-            <span class="item__char-key">Возврат</span>
-            <span class="item__char-value">Условия</span>
-          </li>
-        </ul>
-      </section>
-
-      <section class="similar">
-        <h2 class="similar__title">Похожие товары</h2>
-
-        <ul class="similar__items">
-
-          <li class="rated card">
-            <div class="rated__descr">
-              <p class="rated__rating">5,0</p>
-              <img src="<%=require('./img/mock/rated/sofa5.png')%>" alt="" class="rated__img">
-              <h3 class="rated__title">Диван из шинила “W-95”</h3>
-            </div>
-            <div class="rated__order-section">
-              <p class="rated__price">94 990 руб</p>
-              <a href="#" class="rated__link secondary-btn">Купить</a>
-            </div>
-          </li>
-
-          <li class="rated card">
-            <div class="rated__descr">
-              <p class="rated__rating">5,0</p>
-              <img src="<%=require('./img/mock/rated/sofa6.png')%>" alt="" class="rated__img">
-              <h3 class="rated__title">Диван флоковый “G-41”</h3>
-            </div>
-            <div class="rated__order-section">
-              <p class="rated__price">94 990 руб</p>
-              <a href="#" class="rated__link secondary-btn">Купить</a>
-            </div>
-          </li>
-
-          <li class="rated card">
-            <div class="rated__descr">
-              <p class="rated__rating">5,0</p>
-              <img src="<%=require('./img/mock/rated/sofa7.png')%>" alt="" class="rated__img">
-              <h3 class="rated__title">Диван шиниловый “V-43”</h3>
-
-              <div class="rated__order-section">
-                <p class="rated__price">94 990 руб</p>
-                <a href="#" class="rated__link secondary-btn">Купить</a>
-              </div>
-          </li>
-
-          <li class="rated card">
-            <div class="rated__descr">
-              <p class="rated__rating">5,0</p>
-              <img src="<%=require('./img/mock/rated/sofa8.png')%>" alt="" class="rated__img">
-              <h3 class="rated__title">Диван велюровый “S-99”</h3>
-            </div>
-            <div class="rated__order-section">
-              <p class="rated__price">94 990 руб</p>
-              <a href="#" class="rated__link secondary-btn">Купить</a>
-            </div>
-          </li>
-        </ul>
-
-        <div class="controls">
-          <button type="button" class="controls__back" aria-label="previous special offer" disabled>
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
-            </svg>
-          </button>
-          <button type="button" class="controls__next" aria-label="next special offer">
-            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
-                stroke-linejoin="round" />
-              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
-            </svg>
-          </button>
-        </div>
-      </section>
-    </div>
-  </main>
 
   <footer class="footer">
     <div class="container">
@@ -396,6 +208,901 @@
   </footer>
 
   <p class="copyright">SDP® 2011-2021</p>
+
+  <template id="product-page-template">
+    <main class="main item-page">
+      <div class="container">
+        <nav class="bread-crumbs">
+          <p class="bread-crumbs__path">Главная / Каталог / Диваны / Прямые диваны</p>
+        </nav>
+
+        <section class="item">
+          <img src="<%=require('./img/mock/item/main.png')%>" alt="" class="item__img">
+
+          <div class="item__gallery">
+            <ul class="item__list">
+              <li class="item__gallery-item-wrapper">
+                <img src="<%=require('./img/mock/item/angles/125.png')%>" alt="" class="item__gallery-item">
+              </li>
+              <li class="item__gallery-item-wrapper">
+                <img src="<%=require('./img/mock/item/angles/127.png')%>" alt="" class="item__gallery-item">
+              </li>
+              <li class="item__gallery-item-wrapper">
+                <img src="<%=require('./img/mock/item/angles/128.png')%>" alt="" class="item__gallery-item">
+              </li>
+              <li class="item__gallery-item-wrapper">
+                <img src="<%=require('./img/mock/item/angles/129.png')%>" alt="" class="item__gallery-item">
+              </li>
+            </ul>
+          </div>
+
+          <div class="item__info">
+            <p class="rated__rating item__rating">5,0</p>
+            <h1 class="item__name">Диван тканевый прямой “D-31”</h1>
+            <p class="item__desc">Мини 120 см без ящика Stark синий (Рогожка)</p>
+            <p class="item__price">28 490 руб</p>
+            <button class="item__buy-btn primary-btn">Купить в один клик</button>
+            <button class="item__add-cart">+ Добавить в корзину</button>
+          </div>
+
+          <article class="item__advert">
+            <h3 class="item__advert-title">Опорный механизм</h3>
+            <p class="item__advert-text">Опорный механизм напоминает пантограф, к которому добавили дополнительную
+              секцию.
+              У опорного дивана сиденье «выпрыгивает» вперёд и вытаскивает вторую часть спального места. Заключительный
+              штрих — опустить спинку.
+            </p>
+            <p class="item__advert-text">
+              Этот механизм не портит пол и не боится ковров. Требуется чуть больше силы, чтобы разложить диван, но
+              подросток справится.
+            </p>
+            <div class="item__demos">
+              <img class="item__demo" src="<%=require('./img/mock/item/demo/demo.png')%>" alt="">
+              <img class="item__demo" src="<%=require('./img/mock/item/demo/demo1.png')%>" alt="">
+            </div>
+          </article>
+
+          <ul class="item__chars">
+            <li class="item__char">
+              <span class="item__char-key">Гарантия</span>
+              <span class="item__char-value">18 месяцев</span>
+            </li>
+
+            <li class="item__char">
+              <span class="item__char-key">Артикул</span>
+              <span class="item__char-value">AAA41269004</span>
+            </li>
+
+            <li class="item__char">
+              <span class="item__char-key">Длина</span>
+              <span class="item__char-value">163 см</span>
+            </li>
+            <li class="item__char">
+              <span class="item__char-key">Высота</span>
+              <span class="item__char-value">90 см</span>
+            </li>
+            <li class="item__char">
+              <span class="item__char-key">Глубина</span>
+              <span class="item__char-value">108 см</span>
+            </li>
+            <li class="item__char">
+              <span class="item__char-key">Спальное место</span>
+              <span class="item__char-value">200 см х 125 см</span>
+            </li>
+            <li class="item__char">
+              <span class="item__char-key">Высота посадки</span>
+              <span class="item__char-value">45 см</span>
+            </li>
+            <li class="item__char">
+              <span class="item__char-key">Механизм</span>
+              <span class="item__char-value">Опорный</span>
+            </li>
+            <li class="item__char">
+              <span class="item__char-key">Тип обивки</span>
+              <span class="item__char-value">Рогожка</span>
+            </li>
+            <li class="item__char">
+              <span class="item__char-key">Цвет</span>
+              <span class="item__char-value">Синий</span>
+            </li>
+            <li class="item__char">
+              <span class="item__char-key">Наполнитель</span>
+              <span class="item__char-value">Независимый пружинный блок</span>
+            </li>
+            <li class="item__char">
+              <span class="item__char-key">Материал каркаса</span>
+              <span class="item__char-value">Металл. рама с дерев. латами</span>
+            </li>
+            <li class="item__char">
+              <span class="item__char-key">Количество мест</span>
+              <span class="item__char-value">Двухместные</span>
+            </li>
+            <li class="item__char">
+              <span class="item__char-key">Категория</span>
+              <span class="item__char-value">Прямые тканевые диваны</span>
+            </li>
+            <li class="item__char">
+              <span class="item__char-key">Возврат</span>
+              <span class="item__char-value">Условия</span>
+            </li>
+          </ul>
+        </section>
+
+        <section class="similar">
+          <h2 class="similar__title">Похожие товары</h2>
+
+          <ul class="similar__items">
+
+            <li class="rated card">
+              <div class="rated__descr">
+                <p class="rated__rating">5,0</p>
+                <img src="<%=require('./img/mock/rated/sofa5.png')%>" alt="" class="rated__img">
+                <h3 class="rated__title">Диван из шинила “W-95”</h3>
+              </div>
+              <div class="rated__order-section">
+                <p class="rated__price">94 990 руб</p>
+                <a href="#" class="rated__link secondary-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rated card">
+              <div class="rated__descr">
+                <p class="rated__rating">5,0</p>
+                <img src="<%=require('./img/mock/rated/sofa6.png')%>" alt="" class="rated__img">
+                <h3 class="rated__title">Диван флоковый “G-41”</h3>
+              </div>
+              <div class="rated__order-section">
+                <p class="rated__price">94 990 руб</p>
+                <a href="#" class="rated__link secondary-btn">Купить</a>
+              </div>
+            </li>
+
+            <li class="rated card">
+              <div class="rated__descr">
+                <p class="rated__rating">5,0</p>
+                <img src="<%=require('./img/mock/rated/sofa7.png')%>" alt="" class="rated__img">
+                <h3 class="rated__title">Диван шиниловый “V-43”</h3>
+
+                <div class="rated__order-section">
+                  <p class="rated__price">94 990 руб</p>
+                  <a href="#" class="rated__link secondary-btn">Купить</a>
+                </div>
+            </li>
+
+            <li class="rated card">
+              <div class="rated__descr">
+                <p class="rated__rating">5,0</p>
+                <img src="<%=require('./img/mock/rated/sofa8.png')%>" alt="" class="rated__img">
+                <h3 class="rated__title">Диван велюровый “S-99”</h3>
+              </div>
+              <div class="rated__order-section">
+                <p class="rated__price">94 990 руб</p>
+                <a href="#" class="rated__link secondary-btn">Купить</a>
+              </div>
+            </li>
+          </ul>
+
+          <div class="controls">
+            <button type="button" class="controls__back" aria-label="previous special offer" disabled>
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              </svg>
+            </button>
+            <button type="button" class="controls__next" aria-label="next special offer">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              </svg>
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
+  </template>
+
+  <template id="main-page-template">
+    <main class="main">
+      <section class="jumbotron">
+        <div class="jumbotron__slide">
+          <div class="container">
+            <h1 class="jumbotron__title">Скидка 15% на первую покупку</h1>
+            <a class="primary-btn" href="#">Получить!</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="offers container">
+        <h2 class="offers__title">Специальные предложения</h2>
+        <div class="offers__controls controls">
+          <button type="button" class="controls__back" aria-label="previous special offer" disabled>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+            </svg>
+
+          </button>
+          <button type="button" class="controls__next" aria-label="next special offer">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+        <ul class="offers__list">
+          <li class="offer card">
+            <p class="offer__discount">- 9 000</p>
+            <img class="offer__img" src="<%=require('./img/mock/special/armchair.png')%>" alt="кресло">
+            <div class="offer__info">
+              <h3 class="offer__title">Кресло велюровое “X-24”</h3>
+              <div class="offer__price-container">
+                <p class="offer__price">15 990 руб</p>
+                <p class="offer__price offer__price_before">24 990 руб</p>
+              </div>
+              <a class="offer__link secondary-btn" href="#">Купить</a>
+            </div>
+          </li>
+          <li class="offer card">
+            <p class="offer__discount">- 9 000</p>
+            <img class="offer__img" src="<%=require('./img/mock/special/sofa-white.png')%>" alt="кресло">
+            <div class="offer__info">
+              <h3 class="offer__title">Диван тканевый “Z-44”</h3>
+              <div class="offer__price-container">
+                <p class="offer__price">15 990 руб</p>
+                <p class="offer__price offer__price_before">24 990 руб</p>
+              </div>
+              <a class="offer__link secondary-btn" href="#">Купить</a>
+            </div>
+          </li>
+          <li class="offer card">
+            <p class="offer__discount">- 9 000</p>
+            <img class="offer__img" src="<%=require('./img/mock/special/clock.png')%>" alt="кресло">
+            <div class="offer__info">
+              <h3 class="offer__title">Будильник “Quartz-23”</h3>
+              <div class="offer__price-container">
+                <p class="offer__price">15 990 руб</p>
+                <p class="offer__price offer__price_before">24 990 руб</p>
+              </div>
+              <a class="offer__link secondary-btn" href="#">Купить</a>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <section class="rated-section container">
+        <h2 class="rated-section__title">Высокий рейтинг</h2>
+
+        <ul class="rated-section__list">
+
+          <li class="rated card">
+            <div class="rated__descr">
+              <p class="rated__rating">5,0</p>
+              <img src="<%=require('./img/mock/rated/sofa1.png')%>" alt="" class="rated__img">
+              <h3 class="rated__title">Диван кожаный <br>“R-94”</h3>
+            </div>
+            <div class="rated__order-section">
+              <p class="rated__price">94 990 руб</p>
+              <a href="#" class="rated__link secondary-btn">Купить</a>
+            </div>
+          </li>
+
+          <li class="rated card">
+            <div class="rated__descr">
+              <p class="rated__rating">5,0</p>
+              <img src="<%=require('./img/mock/rated/sofa2.png')%>" alt="" class="rated__img">
+              <h3 class="rated__title">Диван апартековый “T-75”</h3>
+            </div>
+            <div class="rated__order-section">
+              <p class="rated__price">94 990 руб</p>
+              <a href="#" class="rated__link secondary-btn">Купить</a>
+            </div>
+          </li>
+
+          <li class="rated card">
+            <div class="rated__descr">
+              <p class="rated__rating">5,0</p>
+              <img src="<%=require('./img/mock/rated/sofa3.png')%>" alt="" class="rated__img">
+              <h3 class="rated__title">Диван тканевый <br>“D-31”</h3>
+            </div>
+            <div class="rated__order-section">
+              <p class="rated__price">94 990 руб</p>
+              <a href="#" class="rated__link secondary-btn">Купить</a>
+            </div>
+          </li>
+
+          <li class="rated card">
+            <div class="rated__descr">
+              <p class="rated__rating">5,0</p>
+              <img src="<%=require('./img/mock/rated/sofa4.png')%>" alt="" class="rated__img">
+              <h3 class="rated__title">Диван велюровый “Y-68”</h3>
+            </div>
+            <div class="rated__order-section">
+              <p class="rated__price">94 990 руб</p>
+              <a href="#" class="rated__link secondary-btn">Купить</a>
+            </div>
+          </li>
+
+          <li class="rated card">
+            <div class="rated__descr">
+              <p class="rated__rating">5,0</p>
+              <img src="<%=require('./img/mock/rated/sofa5.png')%>" alt="" class="rated__img">
+              <h3 class="rated__title">Диван из шинила “W-95”</h3>
+            </div>
+            <div class="rated__order-section">
+              <p class="rated__price">94 990 руб</p>
+              <a href="#" class="rated__link secondary-btn">Купить</a>
+            </div>
+          </li>
+
+          <li class="rated card">
+            <div class="rated__descr">
+              <p class="rated__rating">5,0</p>
+              <img src="<%=require('./img/mock/rated/sofa6.png')%>" alt="" class="rated__img">
+              <h3 class="rated__title">Диван флоковый “G-41”</h3>
+            </div>
+            <div class="rated__order-section">
+              <p class="rated__price">94 990 руб</p>
+              <a href="#" class="rated__link secondary-btn">Купить</a>
+            </div>
+          </li>
+
+          <li class="rated card">
+            <div class="rated__descr">
+              <p class="rated__rating">5,0</p>
+              <img src="<%=require('./img/mock/rated/sofa7.png')%>" alt="" class="rated__img">
+              <h3 class="rated__title">Диван шиниловый “V-43”</h3>
+
+              <div class="rated__order-section">
+                <p class="rated__price">94 990 руб</p>
+                <a href="#" class="rated__link secondary-btn">Купить</a>
+              </div>
+          </li>
+
+          <li class="rated card">
+            <div class="rated__descr">
+              <p class="rated__rating">5,0</p>
+              <img src="<%=require('./img/mock/rated/sofa8.png')%>" alt="" class="rated__img">
+              <h3 class="rated__title">Диван велюровый “S-99”</h3>
+            </div>
+            <div class="rated__order-section">
+              <p class="rated__price">94 990 руб</p>
+              <a href="#" class="rated__link secondary-btn">Купить</a>
+            </div>
+          </li>
+
+        </ul>
+
+        <button type="button" class="rated-section__load-more primary-btn">
+          Смотреть больше товаров
+        </button>
+      </section>
+
+      <section class="banner">
+        <div class="container">
+          <h2 class="banner__title">
+            <span class="banner__accent">Оксфорд 1950</span><br>Новая коллекция изысканных кресел
+          </h2>
+          <a href="#" class="primary-btn">Ознакомиться</a>
+        </div>
+      </section>
+
+      <section class="categories container">
+        <h2 class="categories__title">Топ категории</h2>
+        <ul class="categories__list">
+
+          <li class="category card">
+            <div class="category__info">
+              <ul class="category__sub-categories-list">
+                <li class="category__sub-category-item">
+                  <a href="#" class="category__sub-category-link">Прямые</a>
+                </li>
+                <li class="category__sub-category-item">
+                  <a href="#" class="category__sub-category-link">Угловые</a>
+                </li>
+                <li class="category__sub-category-item">
+                  <a href="#" class="category__sub-category-link">Модульные</a>
+                </li>
+              </ul>
+              <h3 class="category__title">
+                Диваны
+                <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+                </svg>
+              </h3>
+              <img class="category__img" src="<%=require('./img/mock/categories/sofas.png')%>" alt="">
+            </div>
+            <a href="" class="arrow-btn">
+              В каталог
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="category card">
+            <div class="category__info">
+              <ul class="category__sub-categories-list">
+                <li class="category__sub-category-item">
+                  <a href="#" class="category__sub-category-link">Мягкие</a>
+                </li>
+                <li class="category__sub-category-item">
+                  <a href="#" class="category__sub-category-link">Кресла-кровати</a>
+                </li>
+              </ul>
+              <h3 class="category__title">
+                Кресла
+                <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+                </svg>
+              </h3>
+              <img class="category__img" src="<%=require('./img/mock/categories/armchairs.png')%>" alt="">
+            </div>
+            <a href="" class="arrow-btn">
+              В каталог
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="category card">
+            <div class="category__info">
+              <ul class="category__sub-categories-list">
+                <li class="category__sub-category-item">
+                  <a href="#" class="category__sub-category-link">Односпальные</a>
+                </li>
+                <li class="category__sub-category-item">
+                  <a href="#" class="category__sub-category-link">Двуспальные</a>
+                </li>
+              </ul>
+              <h3 class="category__title">
+                Кровати
+                <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+                </svg>
+              </h3>
+              <img class="category__img" src="<%=require('./img/mock/categories/beds.png')%>" alt="">
+            </div>
+            <a href="" class="arrow-btn">
+              В каталог
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="category card">
+            <div class="category__info">
+              <ul class="category__sub-categories-list">
+                <li class="category__sub-category-item">
+                  <a href="#" class="category__sub-category-link">Тумбы</a>
+                </li>
+                <li class="category__sub-category-item">
+                  <a href="#" class="category__sub-category-link">Комоды</a>
+                </li>
+              </ul>
+              <h3 class="category__title">
+                Тумбы и&nbsp;комоды
+                <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+                </svg>
+              </h3>
+              <img class="category__img" src="<%=require('./img/mock/categories/dressers.png')%>" alt="">
+            </div>
+            <a href="" class="arrow-btn">
+              В каталог
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              </svg>
+            </a>
+          </li>
+
+          <li class="category card">
+            <div class="category__info">
+              <ul class="category__sub-categories-list">
+                <li class="category__sub-category-item">
+                  <a href="#" class="category__sub-category-link">Деревянные</a>
+                </li>
+                <li class="category__sub-category-item">
+                  <a href="#" class="category__sub-category-link">Металлокаркас</a>
+                </li>
+              </ul>
+              <h3 class="category__title">
+                Стулья
+                <svg class="category__arrow-link" width="32" height="32" viewBox="0 0 32 32" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+                </svg>
+              </h3>
+              <img class="category__img" src="<%=require('./img/mock/categories/chairs.png')%>" alt="">
+            </div>
+            <a href="" class="arrow-btn">
+              В каталог
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="advice-section container">
+        <h2 class="advice-section__title">Полезное</h2>
+        <ul class="advice-section__list">
+          <li class="advice card">
+            <img src="<%=require('./img/mock/advice/advice1.jpg')%>" alt="" class="advice__img">
+            <div class="advice__info">
+              <h3 class="advice__title">
+                И нет сомнений, что сделанные на базе интернет-аналитики выводы представляют собой не что иное?
+              </h3>
+              <a href="#" class="secondary-btn advice__link">Читать</a>
+            </div>
+          </li>
+          <li class="advice card">
+            <img src="<%=require('./img/mock/advice/advice2.jpg')%>" alt="" class="advice__img">
+            <div class="advice__info">
+              <h3 class="advice__title">
+                Как принято считать, некоторые особенности приносят несомненную пользу обществу?
+              </h3>
+              <a href="#" class="secondary-btn advice__link">Читать</a>
+            </div>
+          </li>
+          <li class="advice card">
+            <img src="<%=require('./img/mock/advice/advice1.jpg')%>" alt="" class="advice__img">
+            <div class="advice__info">
+              <h3 class="advice__title">
+                И нет сомнений, что сделанные на базе интернет-аналитики выводы представляют собой не что иное?
+              </h3>
+              <a href="#" class="secondary-btn advice__link">Читать</a>
+            </div>
+          </li>
+        </ul>
+        <div class="advice-section__controls controls">
+          <button type="button" class="controls__back" aria-label="previous special offer" disabled>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+            </svg>
+          </button>
+          <button type="button" class="controls__next" aria-label="next special offer">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+            </svg>
+          </button>
+        </div>
+      </section>
+
+      <section class="contact container">
+        <form class="contact__form">
+          <h2 class="contact__title">Мы всегда вам рады!</h2>
+          <p class="contact__subtitle">
+            Безусловно, новая модель организационной деятельности в значительной степени обусловливает важность
+            распределения внутренних резервов и ресурсов.
+            <button type="button" class="tooltip" aria-label="tooltip"></button>
+          </p>
+          <input placeholder="Как вас зовут?" type="text" name="name" class="contact__input contact__name">
+          <input placeholder="Ваш телефон" type="tel" name="tel" class="contact__input contact__tel">
+          <input placeholder="Ваш e-mail" type="email" name="email" class="contact__input contact__email">
+          <input class="primary-btn" type="submit" value="Отправить">
+          <label class="contact__user-agree">
+            <input type="checkbox" name="terms">
+            Принимаю <a href="#"> пользовательское соглашение</a>
+          </label>
+        </form>
+        <div class="contact__decoration"></div>
+      </section>
+    </main>
+  </template>
+
+  <template id="catalog-page-template">
+    <main class="main catalog-page">
+      <div class="container">
+        <nav class="bread-crumbs">
+          <p class="bread-crumbs__path">Главная / Каталог / Диваны / Прямые диваны</p>
+        </nav>
+
+        <div class="catalog-wrapper">
+          <h2 class="title">Каталог</h2>
+
+          <div class="filter-top">
+            <h3 class="filter-top__title">Фильтры:</h3>
+            <div class="filter-top__container">
+              <select class="filter-top__select" aria-label="category" name="category" id="">
+                <option value="default">Категория</option>
+              </select>
+              <select class="filter-top__select" aria-label="price" name="price" id="">
+                <option value="default">Цена</option>
+              </select>
+            </div>
+            <div class="filter-top__container">
+              <select class="filter-top__select" aria-label="discount" name="discount" id="">
+                <option value="default">Скидка</option>
+              </select>
+              <select class="filter-top__select" aria-label="color" name="color" id="">
+                <option value="default">Цвет</option>
+              </select>
+            </div>
+          </div>
+
+          <aside class="aside">
+
+            <form class="filter">
+              <h3 class="filter__title">Фильтровать по:</h3>
+
+              <fieldset class="filter__category filter__fieldset" name="category">
+                <h4 class="filter__category-title">Категория</h4>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="sofa">
+                  Диваны
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="armchair">
+                  Кресла
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="puff">
+                  Пуфы
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="bed">
+                  Кровати
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="mound">
+                  Тумбы
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="comode">
+                  Комоды
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="chair">
+                  Стулья
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="table">
+                  Столы
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="accessory">
+                  Аксессуары
+                </label>
+              </fieldset>
+
+              <fieldset class="filter__price filter__fieldset" name="price">
+                <h4 class="filter__category-title">Цена</h4>
+                <div class="filter__price-inputs-container">
+                  <label class="filter__label">
+                    от
+                    <input class="filter__price-input" type="number" id="price-from" name="price-from" min="0">
+                  </label>
+                  <label class="filter__label">
+                    до
+                    <input class="filter__price-input" type="number" id="price-to" name="price-to">
+                  </label>
+                </div>
+                <div class="filter__price-slider" id="price-slider"></div>
+              </fieldset>
+
+              <fieldset class="filter__discount filter__fieldset" name="discount">
+                <h4 class="filter__category-title">Скидка</h4>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="discount-up" data-value="5000">
+                  Более 5 000
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="discount-less" data-value="5000">
+                  Менее 5 000
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="discount-any">
+                  Не важно
+                </label>
+              </fieldset>
+
+              <fieldset class="filter__color filter__fieldset" name="color">
+                <h4 class="filter__category-title">Цвет</h4>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="brown">
+                  Коричневый
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="black">
+                  Черный
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="beige">
+                  Бежевый
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="gray">
+                  Серый
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="white">
+                  Белый
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="blue">
+                  Синий
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="orange">
+                  Оранжевый
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="yellow">
+                  Желтый
+                </label>
+                <label class="filter__label">
+                  <input class="filter__checkbox" type="checkbox" name="green">
+                  Зеленый
+                </label>
+              </fieldset>
+            </form>
+
+            <div class="promo">
+              <img class="promo__img" src="<%=require('./img/mock/banner/banner.jpg')%>" alt="">
+              <div class="promo__info">
+                <h2 class="promo__title">
+                  <span class="banner__accent promo__accent">Оксфорд 1950</span>
+                  <br>Новая коллекция изысканных кресел
+                </h2>
+                <a href="" class="arrow-btn">
+                  В каталог
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M14 11L19 16L14 21" stroke="#A65CF0" stroke-width="2" stroke-linecap="round"
+                      stroke-linejoin="round" />
+                    <circle cx="16" cy="16" r="15" stroke="#A65CF0" stroke-width="2" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+          </aside>
+
+          <div class="catalog">
+            <h2 class="catalog__title">Каталог</h2>
+            <ul class="catalog__items">
+
+              <li class="rated card">
+                <div class="rated__descr">
+                  <p class="rated__rating">5,0</p>
+                  <img src="<%=require('./img/mock/rated/sofa1.png')%>" alt="" class="rated__img">
+                  <h3 class="rated__title">Диван кожаный <br>“R-94”</h3>
+                </div>
+                <div class="rated__order-section">
+                  <p class="rated__price">94 990 руб</p>
+                  <a href="#" class="rated__link secondary-btn">Купить</a>
+                </div>
+              </li>
+
+              <li class="rated card">
+                <div class="rated__descr">
+                  <p class="rated__rating">5,0</p>
+                  <img src="<%=require('./img/mock/rated/sofa2.png')%>" alt="" class="rated__img">
+                  <h3 class="rated__title">Диван апартековый “T-75”</h3>
+                </div>
+                <div class="rated__order-section">
+                  <p class="rated__price">94 990 руб</p>
+                  <a href="#" class="rated__link secondary-btn">Купить</a>
+                </div>
+              </li>
+
+              <li class="rated card">
+                <div class="rated__descr">
+                  <p class="rated__rating">5,0</p>
+                  <img src="<%=require('./img/mock/rated/sofa3.png')%>" alt="" class="rated__img">
+                  <h3 class="rated__title">Диван тканевый <br>“D-31”</h3>
+                </div>
+                <div class="rated__order-section">
+                  <p class="rated__price">94 990 руб</p>
+                  <a href="#" class="rated__link secondary-btn">Купить</a>
+                </div>
+              </li>
+
+              <li class="rated card">
+                <div class="rated__descr">
+                  <p class="rated__rating">5,0</p>
+                  <img src="<%=require('./img/mock/rated/sofa4.png')%>" alt="" class="rated__img">
+                  <h3 class="rated__title">Диван велюровый “Y-68”</h3>
+                </div>
+                <div class="rated__order-section">
+                  <p class="rated__price">94 990 руб</p>
+                  <a href="#" class="rated__link secondary-btn">Купить</a>
+                </div>
+              </li>
+
+              <li class="rated card">
+                <div class="rated__descr">
+                  <p class="rated__rating">5,0</p>
+                  <img src="<%=require('./img/mock/rated/sofa5.png')%>" alt="" class="rated__img">
+                  <h3 class="rated__title">Диван из шинила “W-95”</h3>
+                </div>
+                <div class="rated__order-section">
+                  <p class="rated__price">94 990 руб</p>
+                  <a href="#" class="rated__link secondary-btn">Купить</a>
+                </div>
+              </li>
+
+              <li class="rated card">
+                <div class="rated__descr">
+                  <p class="rated__rating">5,0</p>
+                  <img src="<%=require('./img/mock/rated/sofa6.png')%>" alt="" class="rated__img">
+                  <h3 class="rated__title">Диван флоковый “G-41”</h3>
+                </div>
+                <div class="rated__order-section">
+                  <p class="rated__price">94 990 руб</p>
+                  <a href="#" class="rated__link secondary-btn">Купить</a>
+                </div>
+              </li>
+
+              <li class="rated card">
+                <div class="rated__descr">
+                  <p class="rated__rating">5,0</p>
+                  <img src="<%=require('./img/mock/rated/sofa7.png')%>" alt="" class="rated__img">
+                  <h3 class="rated__title">Диван шиниловый “V-43”</h3>
+
+                  <div class="rated__order-section">
+                    <p class="rated__price">94 990 руб</p>
+                    <a href="#" class="rated__link secondary-btn">Купить</a>
+                  </div>
+              </li>
+
+              <li class="rated card">
+                <div class="rated__descr">
+                  <p class="rated__rating">5,0</p>
+                  <img src="<%=require('./img/mock/rated/sofa8.png')%>" alt="" class="rated__img">
+                  <h3 class="rated__title">Диван велюровый “S-99”</h3>
+                </div>
+                <div class="rated__order-section">
+                  <p class="rated__price">94 990 руб</p>
+                  <a href="#" class="rated__link secondary-btn">Купить</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="catalog-pagination">
+            <button class="catalog-pagination__btn catalog-pagination__btn_active">1</button>
+            <button class="catalog-pagination__btn">2</button>
+          </div>
+
+        </div>
+      </div>
+    </main>
+  </template>
 </body>
 
 </html>
