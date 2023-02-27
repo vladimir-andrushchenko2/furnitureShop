@@ -19,13 +19,15 @@
     &__gallery {
       grid-area: gallery;
 
-      display: flex;
-      justify-content: space-between;
-
       margin-top: 14px;
       padding: 8px 25px;
 
       background-color: var.$gray-light;
+    }
+
+    &__list {
+      display: flex;
+      justify-content: space-between;
     }
 
     &__info {
@@ -258,7 +260,6 @@
 
       &__gallery {
         margin-top: 32px;
-        flex-direction: column;
         min-height: 349px;
 
         &-item {
@@ -268,6 +269,12 @@
           margin: auto;
           display: block;
         }
+      }
+
+      &__list {
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
       }
 
       &__advert {
@@ -312,5 +319,145 @@
 
 @media screen and (max-width: 720px) {
   .item-page {
+    .bread-crumbs {
+      display: none;
+    }
+
+    .item {
+      margin-top: 32px;
+
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        'img'
+        'gallery'
+        'info'
+        'advert'
+        'chars';
+
+      &__gallery {
+        margin-top: 16px;
+
+        display: flex;
+        overflow-x: auto;
+        min-height: 81px;
+        position: relative;
+
+        padding: 0;
+      }
+
+      &__list {
+        flex-direction: row;
+        align-items: center;
+        position: absolute;
+        width: 500px;
+        top: 0;
+        left: 0;
+      }
+
+      &__gallery-item {
+        height: 61px;
+      }
+
+      &__gallery-item-wrapper {
+        margin: auto;
+      }
+
+      &__info {
+        margin-top: 17px;
+      }
+
+      .rated__rating {
+        transform: none;
+      }
+
+      &__name {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 130%;
+      }
+
+      &__desc {
+        margin-top: 7px;
+        max-width: 244px;
+      }
+
+      &__price {
+        margin-top: 20px;
+        font-size: 24px;
+        line-height: 100%;
+      }
+
+      &__buy-btn {
+        padding: 19px 70px;
+      }
+
+      &__add-cart {
+        max-width: max-content;
+        display: block;
+        margin: 13px auto 0;
+        letter-spacing: 0.5px;
+      }
+
+      &__advert-text {
+        max-width: 295px;
+      }
+
+      &__char {
+        display: flex;
+        flex-direction: column;
+
+        &:not(:first-child) {
+          margin-top: 8px;
+        }
+
+        &-key {
+          font-size: 10px;
+          line-height: 14px;
+
+          &::after {
+            display: none;
+          }
+        }
+
+        &-value {
+          line-height: 19px;
+        }
+      }
+
+      &__demo {
+        max-width: 140px;
+
+        &:not(:first-child) {
+          margin-left: 16px;
+        }
+      }
+    }
+
+    .similar {
+      margin-top: 70px;
+
+      grid-template-areas:
+        'title'
+        'items'
+        'controls';
+
+      &__items {
+        margin-top: 23px;
+        gap: 16px;
+
+        .card {
+          min-height: 278px;
+        }
+      }
+
+      .controls {
+        margin-top: 16px;
+        justify-content: center;
+      }
+    }
+
+    & ~ .footer {
+      margin-top: 65px;
+    }
   }
 }
