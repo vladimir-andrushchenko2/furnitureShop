@@ -32,10 +32,19 @@ const pages = {
     },
     setUpPage() {
       const orderPopup = document.querySelector('.popup-wrapper_order');
+      const successPopup = document.querySelector('.popup-wrapper_success');
 
       document.querySelector('.item__buy-btn').addEventListener('click', () => {
         orderPopup.classList.add('popup-wrapper_opened');
       });
+
+      orderPopup
+        .querySelector('.contact__form')
+        .addEventListener('submit', (event) => {
+          event.preventDefault();
+          orderPopup.classList.remove('popup-wrapper_opened');
+          successPopup.classList.add('popup-wrapper_opened');
+        });
     },
   },
   catalog: {

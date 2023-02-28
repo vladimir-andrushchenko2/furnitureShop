@@ -16,7 +16,7 @@
 
   opacity: 0;
 
-  transition: 1px ease-in-out;
+  transition: 0.2s ease-in-out;
 
   &_opened {
     visibility: visible;
@@ -56,6 +56,22 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
+  }
+
+  &__img {
+    max-width: 172px;
+    margin: auto;
+    display: block;
+
+    transform: translateX(-24px);
+  }
+
+  &_success {
+    padding: 118px 75px 122px;
+
+    .popup__title {
+      margin-top: 32px;
+    }
   }
 
   &_order {
