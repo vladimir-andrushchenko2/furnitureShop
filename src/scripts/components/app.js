@@ -10,6 +10,11 @@ export default class App {
 
   loadPage(pageName) {
     this.clearPage();
-    this.root.append(this.pages[pageName]);
+
+    const { constructPageElement, setUpPage } = this.pages[pageName];
+
+    this.root.append(constructPageElement());
+
+    setUpPage();
   }
 }

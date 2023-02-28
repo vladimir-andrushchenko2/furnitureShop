@@ -1,12 +1,13 @@
 import noUiSlider from 'nouislider';
 
-const priceSlider = document.getElementById('price-slider');
+// const priceSlider = document.getElementById('price-slider');
 
-const priceFromInput = document.getElementById('price-from');
-const priceToInput = document.getElementById('price-to');
+// const priceFromInput = document.getElementById('price-from');
+// const priceToInput = document.getElementById('price-to');
 
 function initSlider({ priceSlider, priceFromInput, priceToInput }) {
   const priceInputsArray = [priceFromInput, priceToInput];
+
   noUiSlider.create(priceSlider, {
     start: [20, 80],
     connect: true,
