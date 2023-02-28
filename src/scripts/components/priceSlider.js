@@ -1,7 +1,6 @@
 import noUiSlider from 'nouislider';
 
 // const priceSlider = document.getElementById('price-slider');
-
 // const priceFromInput = document.getElementById('price-from');
 // const priceToInput = document.getElementById('price-to');
 

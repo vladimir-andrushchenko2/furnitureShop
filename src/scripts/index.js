@@ -58,8 +58,6 @@ const pages = {
 
 const app = new App(root, pages);
 
-app.loadPage('main');
-
 document.body.addEventListener('click', (event) => {
   if (
     event.target.classList.contains('arrow-btn') ||
@@ -84,3 +82,5 @@ document.body.addEventListener('click', (event) => {
     app.loadPage('main');
   }
 });
+
+app.loadPage('main');
