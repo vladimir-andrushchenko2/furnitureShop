@@ -30,7 +30,13 @@ const pages = {
     constructPageElement() {
       return getPageTemplate('product-page-template');
     },
-    setUpPage() {},
+    setUpPage() {
+      const orderPopup = document.querySelector('.popup-wrapper_order');
+
+      document.querySelector('.item__buy-btn').addEventListener('click', () => {
+        orderPopup.classList.add('popup-wrapper_opened');
+      });
+    },
   },
   catalog: {
     constructPageElement() {
@@ -91,7 +97,14 @@ document.body.addEventListener('click', (event) => {
   if (event.target.closest('.logo')) {
     event.preventDefault();
     app.loadPage('main');
+    return;
+  }
+
+  if (event.target.classList.contains('popup__close-btn')) {
+    event.target
+      .closest('.popup-wrapper')
+      .classList.remove('popup-wrapper_opened');
   }
 });
 
-app.loadPage('main');
+app.loadPage('product');
