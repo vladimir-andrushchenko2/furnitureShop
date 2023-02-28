@@ -387,10 +387,10 @@
 
   .jumbotron {
     &__slide {
-      height: 210px;
+      min-height: 210px;
       position: relative;
 
-      padding: 30px 17px 125px;
+      padding: 30px 17px;
 
       .primary-btn {
         display: none;
