@@ -4,4 +4,5 @@ import '../styles/style.scss';
 import 'nouislider/dist/nouislider.css';
 
 // import Swiper styles
-import 'swiper/swiper.css';
+import 'swiper/css';
+import 'swiper/css/pagination';

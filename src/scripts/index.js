@@ -3,7 +3,7 @@ import './styles';
 import noUiSlider from 'nouislider';
 // import Swiper bundle with all modules installed
 // import Swiper JS
-import Swiper from 'swiper';
+import Swiper, { Pagination } from 'swiper';
 
 import App from './components/app';
 
@@ -17,7 +17,9 @@ const pages = {
       return getPageTemplate('main-page-template');
     },
     setUpPage() {
+      // eslint-disable-next-line no-unused-vars
       const swiper = new Swiper('.swiper', {
+        modules: [Pagination],
         pagination: {
           el: '.swiper-pagination',
         },
