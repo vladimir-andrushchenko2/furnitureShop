@@ -1,6 +1,9 @@
 import './styles';
 
 import noUiSlider from 'nouislider';
+// import Swiper bundle with all modules installed
+// import Swiper JS
+import Swiper from 'swiper';
 
 import App from './components/app';
 
@@ -13,7 +16,13 @@ const pages = {
     constructPageElement() {
       return getPageTemplate('main-page-template');
     },
-    setUpPage() {},
+    setUpPage() {
+      const swiper = new Swiper('.swiper', {
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });
+    },
   },
   product: {
     constructPageElement() {

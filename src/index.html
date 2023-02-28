@@ -405,13 +405,35 @@
 
   <template id="main-page-template">
     <main class="main">
-      <section class="jumbotron">
-        <div class="jumbotron__slide">
-          <div class="container">
-            <h1 class="jumbotron__title">Скидка 15% на первую покупку</h1>
-            <a class="primary-btn" href="#">Получить!</a>
+      <section class="jumbotron-wrapper">
+        <div class="jumbotron swiper">
+          <div class="swiper-wrapper">
+
+            <div class="jumbotron__slide jumbotron__slide_sofa swiper-slide">
+              <div class="container">
+                <h1 class="jumbotron__title">Скидка 15% на первую покупку</h1>
+                <a class="primary-btn" href="#">Получить!</a>
+              </div>
+            </div>
+
+            <div class="jumbotron__slide jumbotron__slide_plant swiper-slide">
+              <div class="container">
+                <h1 class="jumbotron__title">1000+ аксессуаров для дома</h1>
+                <a class="primary-btn" href="#">Получить!</a>
+              </div>
+            </div>
+
+            <div class="jumbotron__slide jumbotron__slide_fabric swiper-slide">
+              <div class="container">
+                <h1 class="jumbotron__title">Коллекция стильного и яркого текстиля</h1>
+                <a class="primary-btn" href="#">Получить!</a>
+              </div>
+            </div>
+
           </div>
+          <div class="swiper-pagination"></div>
         </div>
+        <div class="primary-btn jumbotron__btn-sm-screen">Получить!</div>
       </section>
 
       <section class="offers container">

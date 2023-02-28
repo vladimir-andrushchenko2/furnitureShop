@@ -16,5 +16,7 @@ export default class App {
     this.root.append(constructPageElement());
 
     setUpPage();
+
+    window.scroll(0, 0);
   }
 }

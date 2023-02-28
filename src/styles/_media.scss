@@ -215,8 +215,23 @@
   }
 
   .jumbotron__slide {
-    background-image: url(../img/mock/jumbo/jumbo-768.jpg);
     background-position: bottom;
+
+    &_sofa {
+      background-image: url(../img/mock/jumbo/jumbo-768-sofa.jpg);
+    }
+
+    &_plant {
+      background-image: url(../img/mock/jumbo/jumbo-768-plant.jpg);
+    }
+
+    &_fabric {
+      background-image: url(../img/mock/jumbo/jumbo-768-fabric.jpg);
+
+      .jumbotron__title {
+        color: white;
+      }
+    }
   }
 
   .offers {
@@ -375,17 +390,17 @@
       height: 210px;
       position: relative;
 
-      padding: 30px 17px;
+      padding: 30px 17px 125px;
 
       .primary-btn {
-        margin: 0;
-        padding: 22px 105px;
-
-        position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -93px;
+        display: none;
       }
+    }
+
+    &__btn-sm-screen {
+      display: block;
+      margin: 34px auto 0;
+      padding: 22px 104px;
     }
 
     &__title {
@@ -396,7 +411,7 @@
   }
 
   .offers {
-    margin-top: 163px;
+    margin-top: 70px;
 
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
@@ -547,7 +562,8 @@
 
     &:not(:first-child) {
       padding: 16px 16px 17px;
-      // padding: 16px;
+      width: 100%;
+      align-items: center;
 
       .category {
         &__sub {
