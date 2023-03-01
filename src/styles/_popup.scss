@@ -206,6 +206,12 @@
 
 @media screen and (max-width: 999px) {
   .popup {
+    &__close-btn {
+      transform: none;
+      top: 16px;
+      right: 16px;
+    }
+
     &_gallery {
       padding-top: 32px;
 
