@@ -212,6 +212,50 @@
       right: 16px;
     }
 
+    &_success {
+      padding: 60px 51px;
+
+      .popup {
+        &__img {
+          max-width: 73px;
+          transform: translateX(-11px);
+        }
+
+        &__title {
+          font-size: 16px;
+          max-width: 194px;
+          text-align: center;
+          margin-top: 11px;
+        }
+      }
+    }
+
+    &_order {
+      padding: 30px 16px;
+
+      .popup__title {
+        font-size: 24px;
+      }
+
+      .popup__info {
+        max-width: 260px;
+      }
+
+      .contact__input {
+        min-width: 264px;
+        margin-top: 16px;
+      }
+
+      .contact__user-agree {
+        font-size: 12px;
+        line-height: 16px;
+      }
+
+      .primary-btn {
+        margin-top: 16px;
+      }
+    }
+
     &_gallery {
       padding-top: 32px;
 
