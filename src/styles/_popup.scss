@@ -1,3 +1,5 @@
+@use 'vars' as var;
+
 .popup-wrapper {
   width: 100vw;
   height: 100vh;
@@ -92,6 +94,146 @@
     .primary-btn {
       margin-top: 30px;
       padding: 19px 35px;
+    }
+  }
+
+  &_gallery {
+    padding: 0;
+
+    .controls {
+      &__back,
+      &__next {
+        display: none;
+      }
+    }
+
+    .item {
+      &__img {
+        padding: 50px 108px;
+      }
+
+      &__list {
+        display: flex;
+        padding: 20px 51px;
+        background-color: var.$gray-light;
+        border-radius: 0 0 10px 10px;
+      }
+
+      &__gallery-item {
+        height: 126px;
+        width: auto;
+      }
+
+      &__gallery-item-wrapper {
+        &:not(:first-child) {
+          margin-left: 78px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1340px) {
+  .popup {
+    &_gallery {
+      padding-top: 50px;
+
+      .controls {
+        &__next,
+        &__back {
+          display: block;
+          position: absolute;
+          bottom: 67px;
+        }
+
+        &__next {
+          right: 16px;
+        }
+
+        &__back {
+          left: 16px;
+        }
+      }
+
+      .item__img {
+        max-width: 805px;
+        padding: 0;
+        margin: auto;
+        display: block;
+        margin-bottom: 50px;
+      }
+
+      .item__list {
+        padding: 20px 67px;
+      }
+
+      .item__gallery-item {
+        height: 126px;
+      }
+
+      .item__gallery-item-wrapper {
+        &:first-child {
+          display: none;
+        }
+
+        &:nth-child(2) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .popup {
+    &_gallery {
+      .item__img {
+        max-width: 583px;
+      }
+
+      .item__list {
+        padding: 20px 79px;
+      }
+
+      .item__gallery-item-wrapper {
+        &:nth-child(3) {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 999px) {
+  .popup {
+    &_gallery {
+      padding-top: 32px;
+
+      .item__img {
+        max-width: 264px;
+        margin-bottom: 32px;
+      }
+
+      .item__list {
+        padding: 16px 62px;
+      }
+
+      .controls {
+        &__back,
+        &__next {
+          bottom: 43px;
+        }
+      }
+
+      .item__gallery-item-wrapper {
+        &:nth-child(4) {
+          display: none;
+        }
+      }
+
+      .item__gallery-item {
+        height: 86px;
+      }
     }
   }
 }
