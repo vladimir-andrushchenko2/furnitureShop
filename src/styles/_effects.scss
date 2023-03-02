@@ -114,3 +114,66 @@
     outline: 1px solid var.$primary;
   }
 }
+
+.user-profile-link,
+.user-cart-link {
+  &:hover svg path {
+    fill: var.$primary-light;
+  }
+
+  &:focus-visible {
+    background-color: var.$pink-violet;
+    outline: none;
+
+    svg path {
+      fill: white;
+    }
+  }
+
+  &:active svg path {
+    fill: var.$primary-shade;
+  }
+}
+
+.controls {
+  &__back,
+  &__next {
+    &:disabled svg * {
+      stroke: gray;
+    }
+
+    &:hover:not(:disabled) {
+      circle {
+        fill: var.$primary;
+      }
+
+      path {
+        stroke: white;
+      }
+    }
+
+    &:focus-visible:not(:disabled) {
+      outline: none;
+
+      circle {
+        fill: var.$primary-light;
+        stroke: var.$primary;
+      }
+
+      path {
+        stroke: white;
+      }
+    }
+
+    &:active:not(:disabled) {
+      circle {
+        fill: var.$primary-shade;
+        stroke: var.$primary-shade;
+      }
+
+      path {
+        stroke: white;
+      }
+    }
+  }
+}

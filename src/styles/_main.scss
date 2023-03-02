@@ -138,7 +138,7 @@
   &-profile-link {
     width: 28px;
     height: 28px;
-    background: url(../img/ui/user-default.svg) no-repeat center;
+    // background: url(../img/ui/user-default.svg) no-repeat center;
   }
 
   &-cart-link {
@@ -146,7 +146,7 @@
 
     width: 41px;
     height: 28px;
-    background: url(../img/ui/cart-default.svg) no-repeat right;
+    // background: url(../img/ui/cart-default.svg) no-repeat right;
   }
 }
 
@@ -312,13 +312,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: flex-start;
-
-  &__back,
-  &__next {
-    &:disabled svg * {
-      stroke: gray;
-    }
-  }
 
   &__back svg {
     transform: rotate(180deg);
