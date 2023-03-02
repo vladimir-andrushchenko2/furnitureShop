@@ -116,4 +116,4 @@ document.body.addEventListener('click', (event) => {
   }
 });
 
-app.loadPage('product');
+app.loadPage('main');

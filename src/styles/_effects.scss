@@ -1,0 +1,116 @@
+@use 'vars' as var;
+
+.primary-btn {
+  &:hover {
+    background-color: var.$primary-light;
+  }
+
+  &:focus-visible {
+    background-color: var.$primary-light;
+    outline: 2px solid var.$primary-shade;
+    outline-offset: 0;
+  }
+
+  &:active {
+    background-color: var.$primary-shade;
+  }
+
+  &:disabled {
+    background-color: var.$disabled;
+    color: var.$gray;
+  }
+}
+
+.secondary-btn {
+  &:hover {
+    background-color: var.$primary;
+    color: white;
+  }
+
+  &:focus-visible {
+    background-color: var.$primary-light;
+    color: white;
+    outline: 2px solid var.$primary;
+    outline-offset: 0;
+    border-color: transparent;
+  }
+
+  &:active {
+    background-color: var.$primary-shade;
+    color: white;
+    border-color: transparent;
+  }
+}
+
+.nav__link,
+.info-nav__link {
+  &:hover {
+    color: var.$primary;
+  }
+
+  &:focus-visible {
+    outline: none;
+    background-color: var.$pink-violet;
+  }
+
+  &:active {
+    color: var.$primary-shade;
+  }
+}
+
+.search-form__search-query {
+  &:hover {
+    background-color: var.$input-hover;
+  }
+
+  &:focus-visible {
+    background-color: var.$pink-violet;
+    outline: 2px solid var.$primary;
+  }
+
+  &:active {
+    background-color: var.$gray-light;
+  }
+}
+
+.search-form__category {
+  &:hover {
+    border-color: var.$primary;
+  }
+
+  &:focus-visible {
+    background-color: var.$pink-violet;
+    border-color: var.$primary;
+    outline: none;
+  }
+
+  &:active {
+    border-color: var.$primary-shade;
+  }
+}
+
+.telephone {
+  &:hover {
+    color: #ffbd59;
+  }
+
+  &:focus-visible {
+    background-color: #fff5d1;
+    outline: none;
+  }
+
+  &:active {
+    color: #bb370e;
+  }
+}
+
+.contact__input {
+  &:hover {
+    background-color: var.$input-hover;
+  }
+
+  &:focus-visible {
+    background-color: var.$pink-violet;
+    outline: 1px solid var.$primary;
+  }
+}
