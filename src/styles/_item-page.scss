@@ -14,6 +14,7 @@
 
     &__img {
       grid-area: img;
+      cursor: pointer;
     }
 
     &__gallery {
@@ -23,6 +24,10 @@
       padding: 8px 25px;
 
       background-color: var.$gray-light;
+    }
+
+    &__gallery-item {
+      cursor: pointer;
     }
 
     &__list {

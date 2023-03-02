@@ -33,9 +33,19 @@ const pages = {
     setUpPage() {
       const orderPopup = document.querySelector('.popup-wrapper_order');
       const successPopup = document.querySelector('.popup-wrapper_success');
+      const imgPopup = document.querySelector('.popup-wrapper_gallery');
 
       document.querySelector('.item__buy-btn').addEventListener('click', () => {
         orderPopup.classList.add('popup-wrapper_opened');
+      });
+
+      document.querySelector('.item').addEventListener('click', (event) => {
+        if (
+          event.target.classList.contains('item__img') ||
+          event.target.classList.contains('item__gallery-item')
+        ) {
+          imgPopup.classList.add('popup-wrapper_opened');
+        }
       });
 
       orderPopup
